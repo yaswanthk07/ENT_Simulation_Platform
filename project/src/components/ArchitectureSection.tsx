@@ -33,21 +33,18 @@ export default function ArchitectureSection() {
             <br />
             <span className="text-gradient-cyan">MULTIPLE COMPUTE ENGINES.</span>
           </h2>
-          <p className="text-slate-300 text-base sm:text-lg mt-3 leading-relaxed">
-            Governing physics models orchestrated across classical, AI/ML surrogate, and quantum computational co-processors where each method is most effective.
-          </p>
         </div>
 
         {/* Horizontal Architecture Flow Pipeline */}
         <div className={`max-w-4xl mx-auto flex flex-col items-center transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           
-          {/* Step 1: Engineering Physics */}
+          {/* Step 1: Engineering The Physics */}
           <div className="w-full max-w-md p-4 rounded-sm bg-bg-card border border-brand-cyan/40 text-center shadow-lg">
             <div className="font-mono text-[11px] font-bold text-brand-cyan tracking-[0.2em] uppercase">
               STEP 01
             </div>
             <div className="text-base font-bold text-white mt-0.5">
-              ENGINEERING PHYSICS
+              ENGINEERING THE PHYSICS
             </div>
             <div className="text-xs text-slate-300 mt-1">
               Fluid, Thermal, Structural, Multiphase, Acoustic & Coupled Field Equations
