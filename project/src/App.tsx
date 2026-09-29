@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
+import ComputationalBottleneckSection from '@/components/ComputationalBottleneckSection';
 import PlatformIntro from '@/components/PlatformIntro';
 import ClassicalSimSection from '@/components/ClassicalSimSection';
 import QuantumSection from '@/components/QuantumSection';
@@ -13,6 +14,7 @@ export default function App() {
       <Navigation />
       <main>
         <HeroSection />
+        <ComputationalBottleneckSection />
         <PlatformIntro />
         <ClassicalSimSection />
         <QuantumSection />

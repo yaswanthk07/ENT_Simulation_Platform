@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { Zap, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const PARTICLES = Array.from({ length: 60 }, (_, i) => ({
   id: i,
@@ -229,7 +229,8 @@ const statLabels = ['VELOCITY', 'PRESSURE', 'TEMPERATURE', 'STRESS', 'MESH', 'SO
 
 export default function HeroSection() {
   const scrollDown = () => {
-    document.getElementById('platform')?.scrollIntoView({ behavior: 'smooth' });
+    const el = document.getElementById('bottleneck') || document.getElementById('platform');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -264,30 +265,30 @@ export default function HeroSection() {
             {/* Badge */}
 
 
-            <h1 className="text-4xl sm:text-6xl xl:text-7xl font-black leading-[1.08] tracking-tight mb-6">
-              <span className="text-white">QUANTUM ENGINEERING</span>
-              <br />
-              <span className="text-gradient-brand">SIMULATION PLATFORM</span>
+            <h1 className="text-5xl sm:text-7xl xl:text-8xl font-black leading-[1.08] tracking-tight mb-6">
+              <span className="text-white">ENT</span>
+              <span className="text-gradient-brand">angle</span>
             </h1>
 
             <p className="text-slate-200 text-lg sm:text-xl leading-relaxed mb-9 max-w-2xl font-normal">
-              Quantum-Powered Engineering Intelligence for Future.
+              Setting the Platform for the Quantum Engineering Simulation
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <button
-                onClick={() => document.getElementById('simulation-lab')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-base font-bold tracking-wider"
-              >
-                <Zap size={18} />
-                LAUNCH SIMULATION LAB
-              </button>
               <button
                 onClick={scrollDown}
                 className="btn-secondary flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-base font-bold tracking-wider"
               >
                 EXPLORE PLATFORM
               </button>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@enginuvitynexus.com&su=Start%20Free%20Trial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-base font-bold tracking-wider"
+              >
+                Start Free Trial
+              </a>
             </div>
 
             {/* Quick stats */}
@@ -305,6 +306,11 @@ export default function HeroSection() {
                 <div className="text-xs sm:text-sm text-slate-300 mt-1 font-mono font-medium">compute-intensive subproblems</div>
               </div>
             </div>
+
+            {/* Research initiative disclaimer */}
+            <p className="text-xs sm:text-sm text-slate-400 mt-6 leading-relaxed font-normal border-l-2 border-brand-cyan/40 pl-3">
+              ENTangle is currently a research-stage initiative. The features shown on this website represent our planned development roadmap and conceptual framework.
+            </p>
           </div>
 
           {/* Right: 3D Visualization (5 cols) */}

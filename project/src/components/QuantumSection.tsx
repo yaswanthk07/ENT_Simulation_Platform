@@ -394,7 +394,7 @@ export default function QuantumSection() {
           {/* Heading for Computational Pipeline */}
           <div className="mb-8">
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight uppercase">
-              FROM STATE REPRESENTATION TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#03cff4] to-[#0c8fce]">ENGINEERING INSIGHT</span>
+              Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#03cff4] to-[#0c8fce]">Computational Pathway</span>
             </h3>
           </div>
 
