@@ -58,7 +58,7 @@ export default function ComputationalBottleneckSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#03cff4]" />
                   <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest uppercase">
-                    01 // SCALE
+                    01 SCALE
                   </span>
                 </div>
                 <span className="font-mono text-[10px] text-[#aaa8ba] uppercase tracking-wider bg-slate-900/90 px-2 py-0.5 rounded border border-white/5">
@@ -114,7 +114,7 @@ export default function ComputationalBottleneckSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#0c8fce]" />
                   <span className="font-mono text-xs font-bold text-[#0c8fce] tracking-widest uppercase">
-                    02 // ITERATE
+                    02 ITERATE
                   </span>
                 </div>
                 <span className="font-mono text-[10px] text-[#aaa8ba] uppercase tracking-wider bg-slate-900/90 px-2 py-0.5 rounded border border-white/5">
@@ -178,7 +178,7 @@ export default function ComputationalBottleneckSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#fa9224]" />
                   <span className="font-mono text-xs font-bold text-[#fa9224] tracking-widest uppercase">
-                    03 // EXPLORE
+                    03 EXPLORE
                   </span>
                 </div>
                 <span className="font-mono text-[10px] text-[#aaa8ba] uppercase tracking-wider bg-slate-900/90 px-2 py-0.5 rounded border border-white/5">
@@ -245,7 +245,7 @@ export default function ComputationalBottleneckSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#9f04c3]" />
                   <span className="font-mono text-xs font-bold text-[#9f04c3] tracking-widest uppercase">
-                    04 // COUPLE
+                    04 COUPLE
                   </span>
                 </div>
                 <span className="font-mono text-[10px] text-[#aaa8ba] uppercase tracking-wider bg-slate-900/90 px-2 py-0.5 rounded border border-white/5">
