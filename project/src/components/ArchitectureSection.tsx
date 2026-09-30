@@ -24,7 +24,7 @@ export default function ArchitectureSection() {
         {/* Section Header */}
         <div className={`text-center max-w-3xl mx-auto mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block px-3.5 py-1 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-3">
-            <span className="font-mono text-xs font-bold text-brand-cyan tracking-[0.2em] uppercase">
+            <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
               INTELLIGENT HYBRID ARCHITECTURE
             </span>
           </div>

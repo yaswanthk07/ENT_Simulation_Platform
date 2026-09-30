@@ -17,7 +17,7 @@ export default function ComputationalBottleneckSection() {
         <div className="max-w-4xl mb-20">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm border border-[#03cff4]/30 bg-[#03cff4]/10 mb-4 shadow-[0_0_15px_rgba(3,207,244,0.12)]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#03cff4] animate-pulse" />
-            <span className="font-mono text-xs font-bold text-[#03cff4] tracking-[0.2em] uppercase">
+            <span className="font-mono text-sm sm:text-base font-bold text-[#03cff4] tracking-[0.2em] uppercase">
               THE COMPUTATIONAL BOTTLENECK
             </span>
           </div>

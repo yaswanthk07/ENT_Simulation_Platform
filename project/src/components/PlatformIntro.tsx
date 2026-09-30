@@ -108,7 +108,7 @@ export default function PlatformIntro() {
           className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="inline-block px-4 py-1.5 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-4">
-            <span className="font-mono text-xs font-bold text-brand-cyan tracking-[0.2em] uppercase">
+            <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
               WHY ENGINUVITY NEXUS TECHNOLOGIES ?
             </span>
           </div>

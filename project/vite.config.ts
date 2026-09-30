@@ -14,4 +14,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    watch: {
+      ignored: ['**/*.mp4', '**/*.mov', '**/*.avi', '**/*.webm', '**/*.mkv'],
+    },
+  },
 });

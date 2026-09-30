@@ -76,7 +76,7 @@ export default function RoadmapSection() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 border border-brand-cyan/40 rounded-sm bg-brand-cyan/10 mb-4 shadow-[0_0_15px_rgba(0,229,255,0.15)]">
             <Sparkles size={14} className="text-brand-cyan animate-pulse" />
-            <span className="font-mono text-xs font-bold text-brand-cyan tracking-[0.2em] uppercase">
+            <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
               5-YEAR TECHNOLOGY STRATEGY · QCFD HORIZON
             </span>
           </div>
