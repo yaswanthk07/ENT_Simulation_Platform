@@ -33,11 +33,8 @@ export default function ComputationalBottleneckSection() {
           </h2>
 
           <div className="border-l-2 border-[#03cff4]/40 pl-4 py-1">
-            <p className="text-lg sm:text-xl font-semibold text-white/90 mb-2">
+            <p className="text-lg sm:text-xl font-semibold text-white/90">
               High-fidelity engineering simulation is no longer about solving a single model.
-            </p>
-            <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed max-w-3xl">
-              Modern workflows require finer meshes, repeated numerical solves, coupled physics and large-scale design exploration — increasing computational cost, memory demand and time-to-solution.
             </p>
           </div>
         </div>
@@ -70,36 +67,8 @@ export default function ComputationalBottleneckSection() {
                 SIMULATIONS ARE<br />GETTING BIGGER
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#03cff4] mb-3">
+              <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 More resolution means more computation.
-              </div>
-
-              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed mb-6">
-                Higher-fidelity CFD, FEA and multiphysics models require increasingly larger meshes and more degrees of freedom to capture boundary layers, shocks, and micro-vortices.
-              </p>
-
-              {/* Visual Sequence */}
-              <div className="p-4 rounded-sm bg-[#040409] border border-[#01c8f3]/20">
-                <div className="text-xs sm:text-sm font-mono text-[#03cff4] mb-2 uppercase tracking-widest font-bold">
-                  RESOLUTION PROGRESSION:
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-2 text-sm sm:text-base font-mono text-slate-300 bg-[#090713] p-3 rounded border border-white/5">
-                  <span className="px-2.5 py-1 rounded bg-[#03cff4]/10 text-[#03cff4] font-bold border border-[#03cff4]/30">
-                    COARSE MESH
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2.5 py-1 rounded bg-[#03cff4]/10 text-[#03cff4] font-bold border border-[#03cff4]/30">
-                    MEDIUM MESH
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2.5 py-1 rounded bg-[#03cff4]/15 text-[#03cff4] font-bold border border-[#03cff4]/40">
-                    FINE MESH
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2.5 py-1 rounded bg-[#03cff4]/25 text-white font-extrabold border border-[#03cff4]">
-                    HIGH-FIDELITY MODEL
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -126,44 +95,8 @@ export default function ComputationalBottleneckSection() {
                 THE SAME EQUATIONS<br />ARE SOLVED AGAIN AND AGAIN
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#0c8fce] mb-3">
+              <div className="text-lg sm:text-xl font-semibold text-[#0c8fce]">
                 Simulation is iterative by nature.
-              </div>
-
-              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed mb-6">
-                Large linear systems, nonlinear corrections and convergence loops may be solved repeatedly throughout a single engineering simulation.
-              </p>
-
-              {/* Visual Flow Loop */}
-              <div className="p-4 rounded-sm bg-[#040409] border border-[#01c8f3]/20">
-                <div className="text-xs sm:text-sm font-mono text-[#0c8fce] mb-2 uppercase tracking-widest font-bold">
-                  SOLVER CONVERGENCE LOOP:
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-1.5 text-sm sm:text-base font-mono text-slate-300 bg-[#090713] p-3 rounded border border-white/5">
-                  <span className="px-2 py-1 rounded bg-[#0c8fce]/10 text-[#0c8fce] font-bold border border-[#0c8fce]/30">
-                    INITIAL STATE
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2 py-1 rounded bg-[#0c8fce]/10 text-white font-semibold">
-                    SOLVE
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2 py-1 rounded bg-[#0c8fce]/10 text-white font-semibold">
-                    UPDATE
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2 py-1 rounded bg-[#0c8fce]/10 text-white font-semibold">
-                    CHECK CONVERGENCE
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2 py-1 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">
-                    NOT CONVERGED ↺ SOLVE AGAIN
-                  </span>
-                  <span className="text-slate-500 font-bold">→</span>
-                  <span className="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/40">
-                    CONVERGED ✓
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -190,47 +123,8 @@ export default function ComputationalBottleneckSection() {
                 DESIGN EXPLORATION<br />MULTIPLIES THE COST
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#fa9224] mb-3">
+              <div className="text-lg sm:text-xl font-semibold text-[#fa9224]">
                 One simulation is manageable. Thousands of designs are not.
-              </div>
-
-              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed mb-6">
-                Engineering optimization can require evaluating many combinations of geometry, materials, operating conditions and design parameters.
-              </p>
-
-              {/* Contrast and Technical Parameters */}
-              <div className="p-4 rounded-sm bg-[#040409] border border-[#01c8f3]/20 mb-4">
-                {/* 1 vs 1,000 Contrast Banner */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 text-center font-mono">
-                  <div className="p-3 rounded bg-[#090713] border border-border-subtle">
-                    <span className="text-xs sm:text-sm text-slate-400 block mb-1">SINGLE CASE</span>
-                    <span className="text-sm sm:text-base font-bold text-white">1 DESIGN → 1 SIMULATION</span>
-                  </div>
-                  <div className="p-3 rounded bg-[#fa9224]/10 border border-[#fa9224]/30">
-                    <span className="text-xs sm:text-sm text-[#fa9224] block mb-1 font-semibold">OPTIMIZATION WORKFLOW</span>
-                    <span className="text-sm sm:text-base font-bold text-[#fa9224]">1,000 DESIGNS → 1,000+ SIMULATIONS</span>
-                  </div>
-                </div>
-
-                {/* Technical Labels */}
-                <div className="flex flex-wrap items-center justify-center gap-2 p-2.5 rounded bg-[#090713] border border-white/5 font-mono text-sm sm:text-base">
-                  <span className="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-slate-300">GEOMETRY</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-slate-300">MATERIAL</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-slate-300">BOUNDARY CONDITIONS</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-slate-300">OPERATING POINT</span>
-                  <span className="text-slate-600">•</span>
-                  <span className="px-2 py-0.5 rounded bg-black/40 border border-white/10 text-[#fa9224] font-bold">DESIGN VARIABLES</span>
-                </div>
-              </div>
-
-              {/* Prominent Callout Line */}
-              <div className="p-3 rounded bg-[#fa9224]/10 border border-[#fa9224]/30 text-center">
-                <span className="text-sm sm:text-base font-mono font-bold text-white tracking-wide">
-                  THE CHALLENGE SHIFTS FROM SOLVING A MODEL TO EXPLORING A DESIGN SPACE
-                </span>
               </div>
             </div>
           </div>
@@ -257,44 +151,8 @@ export default function ComputationalBottleneckSection() {
                 PHYSICS DOESN'T<br />EXIST IN ISOLATION
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#9f04c3] mb-3">
+              <div className="text-lg sm:text-xl font-semibold text-[#9f04c3]">
                 Real engineering systems are coupled.
-              </div>
-
-              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed mb-6">
-                Fluid flow, heat transfer, structural response and acoustic behaviour can influence one another inside the same engineering system.
-              </p>
-
-              {/* Coupled Physics Sequence */}
-              <div className="p-4 rounded-sm bg-[#040409] border border-[#01c8f3]/20">
-                <div className="text-xs sm:text-sm font-mono text-[#9f04c3] mb-2 uppercase tracking-widest font-bold">
-                  MULTI-FIELD FEEDBACK SEQUENCE:
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm sm:text-base font-mono text-slate-300">
-                  <div className="p-2.5 rounded bg-[#090713] border border-white/5">
-                    <strong className="text-[#03cff4]">FLOW</strong> → Changes Temperature
-                  </div>
-                  <div className="p-2.5 rounded bg-[#090713] border border-white/5">
-                    <strong className="text-[#fa9224]">TEMPERATURE</strong> → Changes Material Behaviour
-                  </div>
-                  <div className="p-2.5 rounded bg-[#090713] border border-white/5">
-                    <strong className="text-[#e80874]">STRUCTURAL DEFORMATION</strong> → Changes Flow Geometry
-                  </div>
-                  <div className="p-2.5 rounded bg-[#090713] border border-white/5">
-                    <strong className="text-[#9f04c3]">VIBRATION</strong> → Generates Acoustic Response
-                  </div>
-                </div>
-
-                {/* Reciprocal Coupling Loop */}
-                <div className="mt-3 p-2.5 rounded bg-[#090713] border border-[#9f04c3]/30 flex items-center justify-between text-sm sm:text-base font-mono text-center">
-                  <span className="text-[#03cff4] font-bold">FLUID</span>
-                  <span className="text-slate-500 font-bold">↕</span>
-                  <span className="text-[#fa9224] font-bold">THERMAL</span>
-                  <span className="text-slate-500 font-bold">↕</span>
-                  <span className="text-[#e80874] font-bold">STRUCTURAL</span>
-                  <span className="text-slate-500 font-bold">↕</span>
-                  <span className="text-[#9f04c3] font-bold">ACOUSTICS</span>
-                </div>
               </div>
             </div>
           </div>

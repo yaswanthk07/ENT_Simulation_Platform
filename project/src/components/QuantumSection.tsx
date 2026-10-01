@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { 
-  Atom, 
-  Layers, 
-  Activity, 
-  ChevronDown, 
-  ChevronUp, 
+import {
+  Atom,
+  Layers,
+  Activity,
+  ChevronDown,
+  ChevronUp,
   Zap,
   Cpu
 } from 'lucide-react';
@@ -232,12 +232,12 @@ export default function QuantumSection() {
   };
 
   return (
-    <section 
-      id="quantum" 
+    <section
+      id="quantum"
       className="relative py-28 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/15"
     >
       {/* Precision Engineering Background Grid & Gradients */}
-      <div 
+      <div
         className="absolute inset-0 pointer-events-none opacity-20"
         style={{
           backgroundImage: `
@@ -251,7 +251,7 @@ export default function QuantumSection() {
       <div className="absolute bottom-1/3 left-10 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(159,4,195,0.05)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* ================================================== */}
         {/* SECTION HEADER                                     */}
         {/* ================================================== */}
@@ -285,15 +285,19 @@ export default function QuantumSection() {
                 <div
                   key={item.id}
                   onClick={() => toggleExpand(item.id)}
-                  className={`relative p-6 rounded-sm transition-all duration-300 cursor-pointer flex flex-col justify-between border ${
-                    isExpanded
-                      ? `bg-[#090713] ${item.accent.border.split(' ')[0]} shadow-[0_0_24px_${item.accent.glow}] ring-1 ring-[#03cff4]/40`
+                  style={{
+                    boxShadow: isExpanded
+                      ? `0 0 24px ${item.accent.glow}`
+                      : undefined,
+                  }}
+                  className={`relative p-6 rounded-sm transition-all duration-300 cursor-pointer flex flex-col justify-between border ${isExpanded
+                      ? `bg-[#090713] ${item.accent.border.split(' ')[0]}  ring-1 ring-[#03cff4]/40`
                       : 'bg-[rgba(13,10,24,0.78)] border-[#01c8f3]/15 hover:border-[#01c8f3]/40 hover:bg-[#090713]/90'
-                  }`}
+                    }`}
                 >
                   {/* Top corner technical bracket indicator */}
                   <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-[#03cff4]/30" />
-                  
+
                   <div>
                     {/* Quantum Property Badge */}
                     <div className="flex items-center justify-between gap-2 mb-3">
@@ -355,7 +359,7 @@ export default function QuantumSection() {
         {/* BOTTOM SUMMARY SECTION                             */}
         {/* ================================================== */}
         <div className="mb-12 pt-12 border-t border-[#01c8f3]/20">
-          
+
           {/* Heading for Computational Pipeline */}
           <div className="mb-8">
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase">
@@ -365,7 +369,7 @@ export default function QuantumSection() {
 
           {/* 4 Outcome Blocks */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            
+
             {/* Block 1 */}
             <div className="p-5 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/20 hover:border-[#03cff4]/50 transition-all duration-300">
               <div className="flex items-center gap-2 mb-2">

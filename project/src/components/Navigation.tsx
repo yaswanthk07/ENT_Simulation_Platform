@@ -43,8 +43,12 @@ export default function Navigation() {
               className="h-11 lg:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="hidden sm:flex flex-col">
-              <span className="font-extrabold text-sm tracking-wider text-white">ENGINUVITY NEXUS TECHNOLOGIES</span>
-              <span className="font-mono text-[11px] text-brand-cyan tracking-widest uppercase">Quantum Engineering Platform</span>
+              <span className={`font-extrabold text-sm tracking-wider transition-colors duration-300 ${scrolled ? 'text-white' : 'text-[#0B2340]'}`}>
+                ENGINUVITY NEXUS TECHNOLOGIES
+              </span>
+              <span className={`font-mono text-[11px] tracking-widest uppercase transition-colors duration-300 ${scrolled ? 'text-brand-cyan' : 'text-[#0284C7]'}`}>
+                Quantum Engineering Platform
+              </span>
             </div>
           </a>
 
@@ -54,17 +58,25 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => scrollToTarget(item.target)}
-                className="px-3.5 py-2 text-sm font-semibold text-slate-200 hover:text-brand-cyan transition-colors duration-200 relative group"
+                className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 relative group ${
+                  scrolled
+                    ? 'text-slate-200 hover:text-brand-cyan'
+                    : 'text-[#0B2340] hover:text-[#0284C7]'
+                }`}
               >
                 {item.label}
-                <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-brand-cyan scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <span className={`absolute bottom-1 left-3.5 right-3.5 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ${
+                  scrolled ? 'bg-brand-cyan' : 'bg-[#0284C7]'
+                }`} />
               </button>
             ))}
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden p-2 text-white/70 hover:text-brand-cyan transition-colors"
+            className={`lg:hidden p-2 transition-colors ${
+              scrolled ? 'text-white/70 hover:text-brand-cyan' : 'text-[#0B2340] hover:text-[#0284C7]'
+            }`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -74,13 +86,13 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden glass-panel border-t border-border-subtle max-h-[80vh] overflow-y-auto">
+        <div className="lg:hidden bg-[#061F37]/98 backdrop-blur-xl border-t border-[#10C6F0]/20 max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-4 flex flex-col gap-1">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToTarget(item.target)}
-                className="text-left px-4 py-3 text-base font-medium text-white/80 hover:text-brand-cyan hover:bg-brand-cyan/10 rounded transition-colors duration-200"
+                className="text-left px-4 py-3 text-base font-medium text-white hover:text-brand-cyan hover:bg-brand-cyan/10 rounded transition-colors duration-200"
               >
                 {item.label}
               </button>

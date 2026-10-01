@@ -181,7 +181,7 @@ export default function ClassicalSimSection() {
             </span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
-            WHAT CAN WE <span className="text-gradient-cyan">SIMULATE</span>
+            QUANTUM-ENABLED <span className="text-gradient-cyan">SIMULATION CAPABILITIES</span>
           </h2>
         </div>
 
