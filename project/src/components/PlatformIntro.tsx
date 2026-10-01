@@ -228,11 +228,11 @@ export default function PlatformIntro() {
             <div className="mt-3 p-3 rounded-sm bg-bg-card/90 border border-border-subtle flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
-                <span className="font-mono text-xs text-slate-300 font-medium">
+                <span className="font-mono text-sm sm:text-base text-slate-300 font-medium">
                   SELECTED: <strong className="text-white">{activeBenefit.title}</strong>
                 </span>
               </div>
-              <span className="font-mono text-[10px] tracking-wider px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-bold">
+              <span className="font-mono text-xs sm:text-sm tracking-wider px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-bold">
                 {activeBenefit.tag}
               </span>
             </div>

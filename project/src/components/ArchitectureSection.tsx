@@ -46,7 +46,7 @@ export default function ArchitectureSection() {
             <div className="text-base font-bold text-white mt-0.5">
               ENGINEERING THE PHYSICS
             </div>
-            <div className="text-xs text-slate-300 mt-1">
+            <div className="text-sm text-slate-300 mt-1">
               Fluid, Thermal, Structural, Multiphase, Acoustic & Coupled Field Equations
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function ArchitectureSection() {
             <div className="text-base font-bold text-white mt-0.5">
               NUMERICAL MODEL
             </div>
-            <div className="text-xs text-slate-300 mt-1">
+            <div className="text-sm text-slate-300 mt-1">
               High-Order Discretization, Adaptive Mesh Topologies & Boundary Constraints
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function ArchitectureSection() {
             <div className="text-base font-bold text-white mt-0.5">
               HYBRID COMPUTE ORCHESTRATION
             </div>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-lg mx-auto">
+            <p className="text-sm text-slate-300 mt-1 max-w-lg mx-auto">
               Coordinates classical, AI and quantum resources according to the engineering problem.
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function ArchitectureSection() {
             <div className="text-base font-bold text-white mt-0.5">
               ENGINEERING INSIGHT
             </div>
-            <div className="text-xs text-slate-200 mt-1">
+            <div className="text-sm text-slate-200 mt-1">
               Verified Accuracy, Accelerated Design Convergence & High-Fidelity Decisions
             </div>
           </div>

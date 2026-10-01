@@ -215,7 +215,7 @@ export default function ClassicalSimSection() {
                 </h3>
 
                 {/* 2-Line Explanation */}
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-5">
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-5">
                   {mod.line1} {mod.line2}
                 </p>
               </div>
@@ -226,7 +226,7 @@ export default function ClassicalSimSection() {
                   {mod.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="font-mono text-[10px] px-2 py-0.5 rounded bg-bg-primary/80 border border-border-subtle text-slate-300"
+                      className="font-mono text-xs sm:text-sm px-2.5 py-0.5 rounded bg-bg-primary/80 border border-border-subtle text-slate-300"
                     >
                       {tag}
                     </span>

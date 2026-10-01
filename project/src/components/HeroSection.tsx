@@ -9,11 +9,28 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-bg-primary">
-      {/* Background effects */}
-      <div className="absolute inset-0 grid-bg opacity-40" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(0,229,255,0.08)_0%,transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_70%,rgba(37,99,235,0.08)_0%,transparent_50%)]" />
+    <section 
+      className="relative min-h-screen flex flex-col overflow-hidden"
+      style={{
+        backgroundColor: '#081A2B',
+        background: `
+          radial-gradient(circle at 30% 36%, rgba(14, 66, 98, 0.52) 0%, rgba(10, 42, 66, 0.32) 38%, transparent 72%),
+          radial-gradient(circle at 82% 52%, rgba(8, 38, 60, 0.35) 0%, transparent 60%),
+          linear-gradient(105deg, #0C263A 0%, #081C2D 38%, #061725 68%, #05131F 100%)
+        `,
+      }}
+    >
+      {/* Background technical grid */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(19, 104, 137, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(19, 104, 137, 0.06) 1px, transparent 1px)
+          `,
+          backgroundSize: '64px 64px',
+        }}
+      />
 
       {/* Floating technical labels */}
       {statLabels.map((label, i) => (
@@ -27,7 +44,7 @@ export default function HeroSection() {
             animationDelay: `${i * 0.4}s`,
           }}
         >
-          <span className="font-mono text-xs text-brand-cyan/50 tracking-widest bg-bg-card/70 px-2 py-0.5 border border-border-subtle rounded">{label}</span>
+          <span className="font-mono text-xs text-brand-cyan/60 tracking-widest bg-[#061725]/70 px-2 py-0.5 border border-brand-cyan/20 rounded">{label}</span>
         </div>
       ))}
 
@@ -45,11 +62,11 @@ export default function HeroSection() {
               <img
                 src="./assets/images/entangle_logo.png"
                 alt="ENTangle"
-                className="h-14 sm:h-20 lg:h-24 w-auto object-contain drop-shadow-[0_0_25px_rgba(1,200,243,0.2)]"
+                className="h-14 sm:h-20 lg:h-24 w-auto object-contain"
               />
             </div>
 
-            <p className="text-slate-200 text-lg sm:text-xl leading-relaxed mb-9 max-w-2xl font-normal">
+            <p className="text-[#F4F7FB] text-lg sm:text-xl leading-relaxed mb-9 max-w-2xl font-normal">
               Setting the Platform for the Quantum Engineering Simulation
             </p>
 
@@ -71,23 +88,23 @@ export default function HeroSection() {
             </div>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-3 gap-6 border-t border-border-subtle pt-7">
+            <div className="grid grid-cols-3 gap-6 border-t border-[#01c8f3]/15 pt-7">
               <div>
                 <div className="text-xl sm:text-2xl xl:text-3xl font-black text-gradient-cyan tracking-tight">EXPLORE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-slate-300 mt-1 font-sans font-normal">larger design spaces</div>
+                <div className="text-base sm:text-lg xl:text-xl text-[#AAB8C7] mt-1 font-sans font-normal">larger design spaces</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl xl:text-3xl font-black text-gradient-cyan tracking-tight">OPTIMIZE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-slate-300 mt-1 font-sans font-normal">complex engineering systems</div>
+                <div className="text-base sm:text-lg xl:text-xl text-[#AAB8C7] mt-1 font-sans font-normal">complex engineering systems</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl xl:text-3xl font-black text-gradient-cyan tracking-tight">ACCELERATE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-slate-300 mt-1 font-sans font-normal">compute-intensive subproblems</div>
+                <div className="text-base sm:text-lg xl:text-xl text-[#AAB8C7] mt-1 font-sans font-normal">compute-intensive subproblems</div>
               </div>
             </div>
 
             {/* Research initiative disclaimer */}
-            <p className="text-sm sm:text-base text-slate-400 mt-6 leading-relaxed font-normal border-l-2 border-brand-cyan/40 pl-3">
+            <p className="text-sm sm:text-base text-[#AAB8C7] mt-6 leading-relaxed font-normal border-l-2 border-brand-cyan/40 pl-3">
               ENTangle is currently a research-stage initiative. The features shown on this website represent our planned development roadmap and conceptual framework.
             </p>
           </div>
@@ -100,21 +117,26 @@ export default function HeroSection() {
               <div className="absolute inset-4 rounded-full border border-brand-cobalt/20" style={{ animation: 'spin 14s linear infinite reverse' }} />
 
               {/* Video visualization */}
-              <div className="absolute inset-6 rounded-lg overflow-hidden flex items-center justify-center">
+              <div className="absolute inset-6 rounded-lg overflow-hidden flex items-center justify-center bg-transparent">
                 <video
-                  src="./assets/ENT_website_animation_video.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-contain mix-blend-screen pointer-events-none"
+                  className="w-full h-full max-w-[500px] object-contain pointer-events-none bg-transparent"
                   style={{
-                    mixBlendMode: 'screen',
-                    filter: 'hue-rotate(65deg) brightness(1.2) contrast(1.1)',
+                    width: '100%',
+                    height: '100%',
+                    maxWidth: '500px',
+                    objectFit: 'contain',
+                    background: 'transparent',
+                    display: 'block',
                   }}
                 >
-                  <source src="./assets/ENT_website_animation_video.mp4" type="video/mp4" />
-                  <source src="./ENT_website_animation_video.mp4" type="video/mp4" />
+                  <source src="./ENT_animation_video.webm" type="video/webm" />
+                  <source src="./ENT_animation_video.mov" type="video/quicktime" />
+                  <source src="./assets/ENT_animation_video.webm" type="video/webm" />
+                  <source src="./assets/ENT_animation_video.mov" type="video/quicktime" />
                 </video>
               </div>
 
@@ -131,7 +153,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={scrollDown}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-300 hover:text-brand-cyan transition-colors duration-300"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-[#AAB8C7] hover:text-brand-cyan transition-colors duration-300"
       >
         <span className="font-mono text-xs tracking-widest uppercase font-semibold">EXPLORE PLATFORM</span>
         <ChevronDown size={18} className="animate-bounce text-brand-cyan" />

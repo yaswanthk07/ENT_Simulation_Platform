@@ -315,16 +315,16 @@ export default function QuantumSection() {
                       <button
                         type="button"
                         onClick={(e) => toggleExpand(item.id, e)}
-                        className="font-mono text-xs font-semibold text-[#03cff4] hover:text-white flex items-center gap-1 transition-colors py-1"
+                        className="font-mono text-xs sm:text-sm font-semibold text-[#03cff4] hover:text-white flex items-center gap-1 transition-colors py-1"
                       >
                         <span>{isExpanded ? 'HIDE HOW IT HELPS' : 'HOW IT HELPS'}</span>
-                        {isExpanded ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+                        {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                       </button>
                     </div>
 
                     {/* Expandable Accordion with technical details */}
                     {isExpanded && (
-                      <div className="mt-3 pt-3 border-t border-[#01c8f3]/10 text-xs flex flex-col gap-3 animate-fadeIn">
+                      <div className="mt-3 pt-3 border-t border-[#01c8f3]/10 text-xs sm:text-sm flex flex-col gap-3 animate-fadeIn">
                         <div>
                           <span className="font-mono text-[10px] text-[#03cff4] uppercase font-bold tracking-wider block mb-1">
                             HOW IT WORKS:
@@ -340,41 +340,6 @@ export default function QuantumSection() {
                           </span>
                           <p className="text-[#aaa8ba] leading-relaxed">
                             {item.engineeringRelevance}
-                          </p>
-                        </div>
-
-                        {item.mathFormula && (
-                          <div className="p-2.5 rounded bg-[#040409] border border-[#01c8f3]/20">
-                            <span className="font-mono text-[9px] text-[#03cff4] uppercase font-bold tracking-wider block mb-1">
-                              MATHEMATICAL FORMULATION
-                            </span>
-                            <div className="font-mono text-xs text-white font-semibold">
-                              {item.mathFormula.latex}
-                            </div>
-                            <div className="font-mono text-[9px] text-[#aaa8ba] mt-0.5">
-                              {item.mathFormula.sublabel}
-                            </div>
-                          </div>
-                        )}
-
-                        <div className="p-2.5 rounded bg-[#040409]/90 border border-[#01c8f3]/20 space-y-1.5">
-                          <div className="text-[10px] font-mono flex items-center justify-between">
-                            <span className="text-red-400 font-bold">Classical:</span>
-                            {item.classicalVsQuantum.complexity?.classical && (
-                              <span className="text-[#aaa8ba] text-[9px]">{item.classicalVsQuantum.complexity.classical}</span>
-                            )}
-                          </div>
-                          <p className="text-[11px] text-[#aaa8ba] leading-snug">
-                            {item.classicalVsQuantum.classicalDesc}
-                          </p>
-                          <div className="text-[10px] font-mono flex items-center justify-between pt-1 border-t border-[#01c8f3]/10">
-                            <span className="text-[#03cff4] font-bold">Quantum:</span>
-                            {item.classicalVsQuantum.complexity?.quantum && (
-                              <span className="text-emerald-400 text-[9px]">{item.classicalVsQuantum.complexity.quantum}</span>
-                            )}
-                          </div>
-                          <p className="text-[11px] text-[#fbfbff] leading-snug">
-                            {item.classicalVsQuantum.quantumDesc}
                           </p>
                         </div>
                       </div>
@@ -393,7 +358,7 @@ export default function QuantumSection() {
           
           {/* Heading for Computational Pipeline */}
           <div className="mb-8">
-            <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight uppercase">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase">
               Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#03cff4] to-[#0c8fce]">Computational Pathway</span>
             </h3>
           </div>
@@ -407,14 +372,14 @@ export default function QuantumSection() {
                 <div className="w-7 h-7 rounded bg-[#03cff4]/10 border border-[#03cff4]/30 flex items-center justify-center text-[#03cff4]">
                   <Layers size={15} />
                 </div>
-                <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest">
-                  01 // REPRESENT
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#03cff4] tracking-widest">
+                  01 REPRESENT
                 </span>
               </div>
-              <h5 className="font-bold text-white text-base mb-1">
+              <h5 className="font-bold text-white text-base sm:text-lg mb-1">
                 State Spaces
               </h5>
-              <p className="text-xs text-[#aaa8ba] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed">
                 High-dimensional engineering state spaces and discretized finite-volume vectors encoded natively into Hilbert space.
               </p>
             </div>
@@ -425,14 +390,14 @@ export default function QuantumSection() {
                 <div className="w-7 h-7 rounded bg-[#0c8fce]/10 border border-[#0c8fce]/30 flex items-center justify-center text-[#0c8fce]">
                   <Cpu size={15} />
                 </div>
-                <span className="font-mono text-xs font-bold text-[#0c8fce] tracking-widest">
-                  02 // PROCESS
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#0c8fce] tracking-widest">
+                  02 PROCESS
                 </span>
               </div>
-              <h5 className="font-bold text-white text-base mb-1">
+              <h5 className="font-bold text-white text-base sm:text-lg mb-1">
                 Encoded States
               </h5>
-              <p className="text-xs text-[#aaa8ba] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed">
                 Encoded states transformed synchronously through quantum unitary operations and parameterized physical circuits.
               </p>
             </div>
@@ -443,14 +408,14 @@ export default function QuantumSection() {
                 <div className="w-7 h-7 rounded bg-[#9f04c3]/10 border border-[#9f04c3]/30 flex items-center justify-center text-[#9f04c3]">
                   <Activity size={15} />
                 </div>
-                <span className="font-mono text-xs font-bold text-[#9f04c3] tracking-widest">
-                  03 // EXTRACT
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#9f04c3] tracking-widest">
+                  03 EXTRACT
                 </span>
               </div>
-              <h5 className="font-bold text-white text-base mb-1">
+              <h5 className="font-bold text-white text-base sm:text-lg mb-1">
                 Spectral & Statistical
               </h5>
-              <p className="text-xs text-[#aaa8ba] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed">
                 Useful spectral modes, resonant eigenvalues, and statistical uncertainty quantities extracted with reduced sample complexity.
               </p>
             </div>
@@ -461,14 +426,14 @@ export default function QuantumSection() {
                 <div className="w-7 h-7 rounded bg-[#ffc21c]/10 border border-[#ffc21c]/30 flex items-center justify-center text-[#ffc21c]">
                   <Zap size={15} />
                 </div>
-                <span className="font-mono text-xs font-bold text-[#ffc21c] tracking-widest">
-                  04 // OPTIMIZE
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#ffc21c] tracking-widest">
+                  04 OPTIMIZE
                 </span>
               </div>
-              <h5 className="font-bold text-white text-base mb-1">
+              <h5 className="font-bold text-white text-base sm:text-lg mb-1">
                 Engineering Workflows
               </h5>
-              <p className="text-xs text-[#aaa8ba] leading-relaxed">
+              <p className="text-sm sm:text-base text-[#aaa8ba] leading-relaxed">
                 Complex engineering workflows, aerodynamic geometries, and multiphysics design spaces optimized with hybrid classical co-design.
               </p>
             </div>
