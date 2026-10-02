@@ -407,12 +407,12 @@ export default function QuantumSection() {
             </div>
 
             {/* Block 3 */}
-            <div className="p-5 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/20 hover:border-[#9f04c3]/50 transition-all duration-300">
+            <div className="p-5 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/20 hover:border-[#03cff4]/50 transition-all duration-300">
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-7 h-7 rounded bg-[#9f04c3]/10 border border-[#9f04c3]/30 flex items-center justify-center text-[#9f04c3]">
+                <div className="w-7 h-7 rounded bg-[#03cff4]/10 border border-[#03cff4]/30 flex items-center justify-center text-[#03cff4]">
                   <Activity size={15} />
                 </div>
-                <span className="font-mono text-xs sm:text-sm font-bold text-[#9f04c3] tracking-widest">
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#03cff4] tracking-widest">
                   03 EXTRACT
                 </span>
               </div>
@@ -425,12 +425,12 @@ export default function QuantumSection() {
             </div>
 
             {/* Block 4 */}
-            <div className="p-5 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/20 hover:border-[#ffc21c]/50 transition-all duration-300">
+            <div className="p-5 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/20 hover:border-[#0c8fce]/50 transition-all duration-300">
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-7 h-7 rounded bg-[#ffc21c]/10 border border-[#ffc21c]/30 flex items-center justify-center text-[#ffc21c]">
+                <div className="w-7 h-7 rounded bg-[#0c8fce]/10 border border-[#0c8fce]/30 flex items-center justify-center text-[#0c8fce]">
                   <Zap size={15} />
                 </div>
-                <span className="font-mono text-xs sm:text-sm font-bold text-[#ffc21c] tracking-widest">
+                <span className="font-mono text-xs sm:text-sm font-bold text-[#0c8fce] tracking-widest">
                   04 OPTIMIZE
                 </span>
               </div>

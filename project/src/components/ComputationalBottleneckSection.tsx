@@ -81,8 +81,8 @@ export default function ComputationalBottleneckSection() {
               {/* Header */}
               <div className="flex items-center justify-between pb-4 mb-5 border-b border-[#01c8f3]/15">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#0c8fce]" />
-                  <span className="font-mono text-xs font-bold text-[#0c8fce] tracking-widest uppercase">
+                  <span className="w-2 h-2 rounded-full bg-[#03cff4]" />
+                  <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest uppercase">
                     02 ITERATE
                   </span>
                 </div>
@@ -95,7 +95,7 @@ export default function ComputationalBottleneckSection() {
                 THE SAME EQUATIONS<br />ARE SOLVED AGAIN AND AGAIN
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#0c8fce]">
+              <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 Simulation is iterative by nature.
               </div>
             </div>
@@ -109,8 +109,8 @@ export default function ComputationalBottleneckSection() {
               {/* Header */}
               <div className="flex items-center justify-between pb-4 mb-5 border-b border-[#01c8f3]/15">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#fa9224]" />
-                  <span className="font-mono text-xs font-bold text-[#fa9224] tracking-widest uppercase">
+                  <span className="w-2 h-2 rounded-full bg-[#03cff4]" />
+                  <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest uppercase">
                     03 EXPLORE
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export default function ComputationalBottleneckSection() {
                 DESIGN EXPLORATION<br />MULTIPLIES THE COST
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#fa9224]">
+              <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 One simulation is manageable. Thousands of designs are not.
               </div>
             </div>
@@ -137,8 +137,8 @@ export default function ComputationalBottleneckSection() {
               {/* Header */}
               <div className="flex items-center justify-between pb-4 mb-5 border-b border-[#01c8f3]/15">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#9f04c3]" />
-                  <span className="font-mono text-xs font-bold text-[#9f04c3] tracking-widest uppercase">
+                  <span className="w-2 h-2 rounded-full bg-[#03cff4]" />
+                  <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest uppercase">
                     04 COUPLE
                   </span>
                 </div>
@@ -151,7 +151,7 @@ export default function ComputationalBottleneckSection() {
                 PHYSICS DOESN'T<br />EXIST IN ISOLATION
               </h3>
               
-              <div className="text-lg sm:text-xl font-semibold text-[#9f04c3]">
+              <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 Real engineering systems are coupled.
               </div>
             </div>
