@@ -7,20 +7,21 @@ export default function HeroSection() {
   };
 
   return (
-    <section 
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#070C18]"
-    >
+    <section className="hero relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#070C18]">
+      
       {/* ========================================================================= */}
-      {/* SPLIT BACKGROUND ARCHITECTURE: Light Left (#F4F8FB) / Dark Right (#070C18) */}
+      {/* STRICT DUAL-PANEL LAYOUT: hero-left (55%) & hero-right (45%)               */}
       {/* ========================================================================= */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Left Visual Zone: Cool white / very light bluish white */}
-        <div 
-          className="absolute top-0 left-0 w-full lg:w-[54%] xl:w-[53%] h-[68%] lg:h-full bg-[#F4F8FB]"
-        >
-          {/* Subtle technical grid overlay on light background */}
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row w-full min-h-screen">
+        
+        {/* ======================================================================= */}
+        {/* LEFT SIDE: Light background (#F4F8FB), strictly contained               */}
+        {/* ======================================================================= */}
+        <div className="hero-left relative w-full lg:w-[55%] lg:max-w-[55%] min-w-0 bg-[#F4F8FB] overflow-hidden flex flex-col justify-center pt-24 sm:pt-28 pb-16 lg:pb-20 px-6 sm:px-10 lg:pl-12 lg:pr-8 xl:pl-16 xl:pr-12 2xl:pl-24 2xl:pr-16 border-b lg:border-b-0 lg:border-r border-[#01C8F3]/25">
+          
+          {/* Subtle technical grid overlay for light background */}
           <div 
-            className="absolute inset-0 opacity-45"
+            className="absolute inset-0 pointer-events-none opacity-45"
             style={{
               backgroundImage: `
                 linear-gradient(rgba(11, 35, 64, 0.065) 1px, transparent 1px),
@@ -29,15 +30,101 @@ export default function HeroSection() {
               backgroundSize: '54px 54px',
             }}
           />
+
+          {/* Content wrapper strictly contained inside hero-left */}
+          <div className="hero-content relative z-20 w-full max-w-[620px] xl:max-w-[680px] mx-auto lg:mx-0 flex flex-col justify-center min-w-0">
+            
+            {/* Prominent ENTangle Logo */}
+            <div className="hero-logo mb-4 sm:mb-5 lg:mb-6 max-w-full">
+              <h1 className="sr-only">ENTangle — Quantum Engineering Simulation Platform</h1>
+              <img
+                src="./assets/images/entangle_logo.png"
+                alt="ENTangle"
+                className="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 w-auto max-w-full object-contain filter drop-shadow-sm"
+              />
+            </div>
+
+            {/* Slogan */}
+            <p className="hero-tagline text-[#07192F] text-lg sm:text-xl md:text-2xl lg:text-[1.65rem] xl:text-[1.85rem] leading-tight font-bold tracking-tight mb-8 sm:mb-9 max-w-full">
+              Quantum Engineering Simulation Platform
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="hero-buttons flex flex-col sm:flex-row flex-wrap gap-3.5 sm:gap-4 mb-9 sm:mb-10 max-w-full">
+              {/* Button 1: EXPLORE PLATFORM */}
+              <button
+                onClick={scrollDown}
+                className="flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded bg-white text-[#0A2540] hover:text-[#01C8F3] border border-[#CBDCE9] font-bold text-sm sm:text-base tracking-wider transition-all duration-200 shadow-[0_2px_10px_rgba(7,20,40,0.08)] hover:shadow-[0_4px_16px_rgba(1,200,243,0.2)] hover:-translate-y-0.5"
+              >
+                EXPLORE PLATFORM
+              </button>
+
+              {/* Button 2: Start Free Trial */}
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@enginuvitynexus.com&su=Start%20Free%20Trial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded bg-[#01C8F3] hover:bg-[#00B4DC] text-white font-bold text-sm sm:text-base tracking-wider transition-all duration-200 shadow-[0_4px_16px_rgba(1,200,243,0.35)] hover:shadow-[0_6px_22px_rgba(1,200,243,0.5)] hover:-translate-y-0.5"
+              >
+                Start Free Trial
+              </a>
+            </div>
+
+            {/* Dedicated Left-Only Divider Line & Key Value Blocks */}
+            <div className="left-divider w-full max-w-full border-t border-[#D5E2EC] pt-6 sm:pt-7">
+              <div className="hero-stats w-full max-w-full">
+                
+                {/* 1. EXPLORE */}
+                <div className="hero-stat min-w-0 max-w-full overflow-hidden">
+                  <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
+                    EXPLORE
+                  </div>
+                  <div className="hero-stat-description text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
+                    larger design spaces
+                  </div>
+                </div>
+
+                {/* 2. OPTIMIZE */}
+                <div className="hero-stat min-w-0 max-w-full overflow-hidden">
+                  <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
+                    OPTIMIZE
+                  </div>
+                  <div className="hero-stat-description text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
+                    complex engineering systems
+                  </div>
+                </div>
+
+                {/* 3. ACCELERATE */}
+                <div className="hero-stat min-w-0 max-w-full overflow-hidden">
+                  <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
+                    ACCELERATE
+                  </div>
+                  <div className="hero-stat-description text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
+                    compute-intensive subproblems
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Disclaimer Line (Strictly inside hero-left) */}
+            <div className="mt-7 sm:mt-8 w-full max-w-full">
+              <p className="hero-disclaimer w-full max-w-full text-xs sm:text-sm lg:text-[0.95rem] text-[#334E68] leading-relaxed font-normal border-l-2 border-[#01C8F3] pl-3.5">
+                ENTangle is currently a research-stage initiative. The features shown on this website represent our planned development roadmap and conceptual framework.
+              </p>
+            </div>
+
+          </div>
         </div>
 
-        {/* Right Visual Zone: Very dark navy / near-black blue */}
-        <div 
-          className="absolute bottom-0 right-0 w-full lg:top-0 lg:w-[46%] xl:w-[47%] h-[32%] lg:h-full bg-[#070C18]"
-        >
-          {/* Subtle technical grid overlay on dark background */}
+        {/* ======================================================================= */}
+        {/* RIGHT SIDE: Dark navy background (#070C18) & Simulation visualization   */}
+        {/* ======================================================================= */}
+        <div className="hero-right relative w-full lg:w-[45%] lg:max-w-[45%] min-w-0 bg-[#070C18] flex items-center justify-center pt-8 pb-16 lg:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          
+          {/* Subtle technical grid overlay for dark background */}
           <div 
-            className="absolute inset-0 opacity-30"
+            className="absolute inset-0 pointer-events-none opacity-30"
             style={{
               backgroundImage: `
                 linear-gradient(rgba(1, 200, 243, 0.08) 1px, transparent 1px),
@@ -51,128 +138,9 @@ export default function HeroSection() {
           <div 
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] bg-[#01C8F3]/6 blur-[120px] rounded-full pointer-events-none"
           />
-        </div>
 
-        {/* Subtle clean vertical separator between the two zones on desktop */}
-        <div 
-          className="hidden lg:block absolute inset-y-0 left-[54%] xl:left-[53%] w-px bg-gradient-to-b from-transparent via-[#01C8F3]/25 to-transparent z-10" 
-        />
-
-        {/* Bottom dark navy footer fade band starting just below the disclaimer line */}
-        <div 
-          className="absolute bottom-0 inset-x-0 h-32 sm:h-36 lg:h-44 pointer-events-none z-10"
-          style={{
-            background: 'linear-gradient(to bottom, rgba(244, 248, 251, 0) 0%, rgba(7, 12, 24, 0.6) 45%, #070C18 100%)',
-          }}
-        />
-      </div>
-
-      {/* ========================================================================= */}
-      {/* FLOATING TECHNICAL HUD LABELS (Dedicated non-overlapping safe zones)       */}
-      {/* ========================================================================= */}
-      <div className="hero-hud-labels" aria-hidden="true">
-        {/* Safe labels on light background */}
-        <span className="hud-label hud-label-light hud-velocity">VELOCITY</span>
-        <span className="hud-label hud-label-light hud-pressure">PRESSURE</span>
-        <span className="hud-label hud-label-light hud-iteration">ITERATION</span>
-
-        {/* Safe labels on dark navy background */}
-        <span className="hud-label hud-label-dark hud-temperature">TEMPERATURE</span>
-        <span className="hud-label hud-label-dark hud-stress">STRESS</span>
-        <span className="hud-label hud-label-dark hud-mesh">MESH</span>
-        <span className="hud-label hud-label-dark hud-solver">SOLVER</span>
-      </div>
-
-      {/* ========================================================================= */}
-      {/* MAIN HERO CONTENT CONTAINER                                               */}
-      {/* ========================================================================= */}
-      <div className="hero-content relative z-20 flex-1 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-20 w-full flex items-center">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 w-full items-center">
-
-          {/* --------------------------------------------------------------------- */}
-          {/* LEFT ZONE: Branding & Content (7 Cols)                                */}
-          {/* --------------------------------------------------------------------- */}
-          <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-center text-left">
-            
-            {/* Prominent ENTangle Logo */}
-            <div className="hero-logo mb-4 sm:mb-5 lg:mb-6">
-              <h1 className="sr-only">ENTangle — Quantum Engineering Simulation Platform</h1>
-              <img
-                src="./assets/images/entangle_logo.png"
-                alt="ENTangle"
-                className="h-14 sm:h-20 md:h-24 lg:h-28 xl:h-32 2xl:h-36 w-auto max-w-full object-contain filter drop-shadow-sm"
-              />
-            </div>
-
-            {/* Slogan */}
-            <p className="hero-tagline text-[#07192F] text-lg sm:text-xl md:text-2xl lg:text-[1.65rem] xl:text-[1.85rem] leading-tight font-bold tracking-tight mb-8 sm:mb-9 max-w-2xl">
-              Quantum Engineering Simulation Platform
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="hero-buttons flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-9 sm:mb-10">
-              {/* Button 1: EXPLORE PLATFORM (White/off-white with dark/cyan text) */}
-              <button
-                onClick={scrollDown}
-                className="flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded bg-white text-[#0A2540] hover:text-[#01C8F3] border border-[#CBDCE9] font-bold text-sm sm:text-base tracking-wider transition-all duration-200 shadow-[0_2px_10px_rgba(7,20,40,0.08)] hover:shadow-[0_4px_16px_rgba(1,200,243,0.2)] hover:-translate-y-0.5"
-              >
-                EXPLORE PLATFORM
-              </button>
-
-              {/* Button 2: Start Free Trial (Cyan filled with white text) */}
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@enginuvitynexus.com&su=Start%20Free%20Trial"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-7 sm:px-8 py-3.5 sm:py-4 rounded bg-[#01C8F3] hover:bg-[#00B4DC] text-white font-bold text-sm sm:text-base tracking-wider transition-all duration-200 shadow-[0_4px_16px_rgba(1,200,243,0.35)] hover:shadow-[0_6px_22px_rgba(1,200,243,0.5)] hover:-translate-y-0.5"
-              >
-                Start Free Trial
-              </a>
-            </div>
-
-            {/* Three Key Value Blocks (Dark navy headings on light background) */}
-            <div className="hero-stats grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 pt-6 sm:pt-7 border-t border-[#D5E2EC]">
-              <div>
-                <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
-                  EXPLORE
-                </div>
-                <div className="text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
-                  larger design spaces
-                </div>
-              </div>
-
-              <div>
-                <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
-                  OPTIMIZE
-                </div>
-                <div className="text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
-                  complex engineering systems
-                </div>
-              </div>
-
-              <div>
-                <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
-                  ACCELERATE
-                </div>
-                <div className="text-sm sm:text-[15px] lg:text-base text-[#475E75] mt-2 font-medium leading-snug">
-                  compute-intensive subproblems
-                </div>
-              </div>
-            </div>
-
-            {/* Disclaimer Line (Subtle left cyan accent line, readable text) */}
-            <div className="mt-7 sm:mt-8">
-              <p className="hero-disclaimer text-xs sm:text-sm lg:text-[0.95rem] text-[#334E68] leading-relaxed font-normal border-l-2 border-[#01C8F3] pl-3.5 max-w-2xl">
-                ENTangle is currently a research-stage initiative. The features shown on this website represent our planned development roadmap and conceptual framework.
-              </p>
-            </div>
-
-          </div>
-
-          {/* --------------------------------------------------------------------- */}
-          {/* RIGHT ZONE: Engineering Visualization (5 Cols)                        */}
-          {/* --------------------------------------------------------------------- */}
-          <div className="engineering-visual lg:col-span-5 xl:col-span-5 relative flex items-center justify-center py-6 lg:py-0">
+          {/* Visualization (100% UNCHANGED) */}
+          <div className="engineering-visual relative z-20 flex items-center justify-center w-full">
             <div className="relative aspect-square w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[480px] xl:max-w-[520px] mx-auto flex items-center justify-center">
               
               {/* Technical corner coordinate brackets */}
@@ -237,14 +205,35 @@ export default function HeroSection() {
           </div>
 
         </div>
+
       </div>
 
       {/* ========================================================================= */}
-      {/* BOTTOM CENTER: Explore Platform Anchor (Inside Dark Navy Fade Band)       */}
+      {/* FLOATING HUD LABELS (Dedicated safe zones)                                */}
       {/* ========================================================================= */}
+      <div className="hero-hud-labels" aria-hidden="true">
+        <span className="hud-label hud-label-light hud-velocity">VELOCITY</span>
+        <span className="hud-label hud-label-light hud-pressure">PRESSURE</span>
+        <span className="hud-label hud-label-light hud-iteration">ITERATION</span>
+        <span className="hud-label hud-label-dark hud-temperature">TEMPERATURE</span>
+        <span className="hud-label hud-label-dark hud-stress">STRESS</span>
+        <span className="hud-label hud-label-dark hud-mesh">MESH</span>
+        <span className="hud-label hud-label-dark hud-solver">SOLVER</span>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* BOTTOM CENTER: Explore Platform Anchor & Navy Fade Band                   */}
+      {/* ========================================================================= */}
+      <div 
+        className="absolute bottom-0 inset-x-0 h-28 sm:h-32 pointer-events-none z-20"
+        style={{
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(7, 12, 24, 0.6) 45%, #070C18 100%)',
+        }}
+      />
+
       <button
         onClick={scrollDown}
-        className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-300 hover:text-[#01C8F3] transition-colors duration-300 z-20 group"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-slate-300 hover:text-[#01C8F3] transition-colors duration-300 z-30 group"
         aria-label="Scroll to explore platform"
       >
         <span className="font-mono text-xs tracking-[0.2em] uppercase font-semibold text-slate-300 group-hover:text-[#01C8F3] transition-colors">
