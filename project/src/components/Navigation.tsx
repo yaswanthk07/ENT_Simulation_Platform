@@ -98,13 +98,13 @@ export default function Navigation() {
                 <span
                   className={`font-mono text-[11px] tracking-widest uppercase transition-colors duration-300 ${
                     menuOpen
-                      ? 'text-[#0284C7]'
+                      ? 'text-[#00B4E6]'
                       : scrolled
                       ? 'text-[#01C8F3]'
-                      : 'text-[#0284C7]'
+                      : 'text-[#00B4E6]'
                   }`}
                 >
-                  Quantum Engineering Simulation Platform
+                  QUANTUM ENGINEERING SIMULATION PLATFORM
                 </span>
               </div>
             </a>
