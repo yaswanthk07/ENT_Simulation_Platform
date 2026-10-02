@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { 
-  GitMerge, Compass, Layers, Brain, Atom, 
+import {
+  GitMerge, Compass, Layers, Brain, Atom,
   CheckCircle2, Zap
 } from 'lucide-react';
 
@@ -102,7 +102,7 @@ export default function PlatformIntro() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,229,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div
           className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -120,7 +120,7 @@ export default function PlatformIntro() {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-center">
-          
+
           {/* Interactive Topology Constellation Diagram (5 cols) */}
           <div
             className={`lg:col-span-5 relative max-w-lg mx-auto w-full transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
@@ -229,7 +229,7 @@ export default function PlatformIntro() {
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
                 <span className="font-mono text-sm sm:text-base text-slate-300 font-medium">
-                  SELECTED: <strong className="text-white">{activeBenefit.title}</strong>
+                  {activeBenefit.title}
                 </span>
               </div>
               <span className="font-mono text-xs sm:text-sm tracking-wider px-2 py-0.5 rounded bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-bold">
@@ -250,16 +250,15 @@ export default function PlatformIntro() {
                   key={item.id}
                   onClick={() => setActiveId(item.id)}
                   onMouseEnter={() => setActiveId(item.id)}
-                  className={`relative text-left p-4 sm:p-4.5 rounded-sm border transition-all duration-200 cursor-pointer group flex items-center justify-between gap-4 ${
-                    isActive
-                      ? 'bg-brand-cyan/15 border-brand-cyan shadow-[0_0_24px_rgba(0,229,255,0.2)] -translate-x-1'
-                      : 'bg-bg-card/85 border-border-subtle hover:border-brand-cyan/50 hover:bg-bg-card'
-                  }`}
+                  className={`relative text-left p-4 sm:p-4.5 rounded-sm border transition-all duration-200 cursor-pointer group flex items-center justify-between gap-4 ${isActive
+                    ? 'bg-brand-cyan/15 border-brand-cyan shadow-[0_0_24px_rgba(0,229,255,0.2)] -translate-x-1'
+                    : 'bg-bg-card/85 border-border-subtle hover:border-brand-cyan/50 hover:bg-bg-card'
+                    }`}
                 >
                   {/* Subtle top-left corner indicator */}
-                  <div 
+                  <div
                     className="absolute top-0 left-0 w-2.5 h-2.5 border-t-2 border-l-2 transition-colors duration-200"
-                    style={{ borderColor: isActive ? '#00E5FF' : 'rgba(0,229,255,0.3)' }} 
+                    style={{ borderColor: isActive ? '#00E5FF' : 'rgba(0,229,255,0.3)' }}
                   />
 
                   <div className="flex items-center gap-3.5 sm:gap-4 flex-1 min-w-0">
@@ -269,11 +268,10 @@ export default function PlatformIntro() {
                         {item.num}
                       </span>
                       <div
-                        className={`p-2.5 rounded transition-colors duration-200 ${
-                          isActive
-                            ? 'bg-brand-cyan text-bg-primary font-bold'
-                            : 'bg-brand-cyan/10 text-brand-cyan group-hover:bg-brand-cyan/20'
-                        }`}
+                        className={`p-2.5 rounded transition-colors duration-200 ${isActive
+                          ? 'bg-brand-cyan text-bg-primary font-bold'
+                          : 'bg-brand-cyan/10 text-brand-cyan group-hover:bg-brand-cyan/20'
+                          }`}
                       >
                         <Icon size={18} />
                       </div>
@@ -297,7 +295,7 @@ export default function PlatformIntro() {
                     </span>
                     <span className="text-[10px] font-mono text-slate-400 flex items-center gap-1.5">
                       <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-brand-cyan animate-ping' : 'bg-slate-500'}`} />
-                      {isActive ? 'ACTIVE' : 'READY'}
+
                     </span>
                   </div>
                 </div>
@@ -331,7 +329,7 @@ export default function PlatformIntro() {
           <div className="flex items-center gap-3 sm:gap-4 text-xs font-mono text-slate-300">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold">
               <CheckCircle2 size={13} />
-              <span>CLASSICAL VERIFIED</span>
+              <span>CLASSICALLY VERIFIED</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan font-semibold">
               <Zap size={13} />

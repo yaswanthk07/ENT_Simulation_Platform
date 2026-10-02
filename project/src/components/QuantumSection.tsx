@@ -277,7 +277,7 @@ export default function QuantumSection() {
         {/* 6 INTERACTIVE ADVANTAGE CARDS                      */}
         {/* ================================================== */}
         <div className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             {advantageData.map((item) => {
               const isExpanded = !!expandedCards[item.id];
 
@@ -290,7 +290,7 @@ export default function QuantumSection() {
                       ? `0 0 24px ${item.accent.glow}`
                       : undefined,
                   }}
-                  className={`relative p-6 rounded-sm transition-all duration-300 cursor-pointer flex flex-col justify-between border ${isExpanded
+                  className={`relative p-6 rounded-sm transition-all duration-300 cursor-pointer flex flex-col border ${isExpanded
                       ? `bg-[#090713] ${item.accent.border.split(' ')[0]}  ring-1 ring-[#03cff4]/40`
                       : 'bg-[rgba(13,10,24,0.78)] border-[#01c8f3]/15 hover:border-[#01c8f3]/40 hover:bg-[#090713]/90'
                     }`}
@@ -314,7 +314,7 @@ export default function QuantumSection() {
                   </div>
 
                   {/* Card Footer: How It Helps Accordion Trigger */}
-                  <div className="pt-3 border-t border-[#01c8f3]/10 flex flex-col gap-2">
+                  <div className="mt-4 pt-3 border-t border-[#01c8f3]/10 flex flex-col gap-2">
                     <div className="flex items-center justify-between">
                       <button
                         type="button"

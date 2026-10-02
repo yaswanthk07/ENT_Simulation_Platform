@@ -1,39 +1,4 @@
-const navColumns = [
-  {
-    heading: 'Platform',
-    links: [
-      { label: 'Quantum Platform', target: 'platform' },
-      { label: 'Simulation Lab', target: 'simulation-lab' },
-      { label: 'Platform Architecture', target: 'technology' },
-      { label: 'Multi-Objective Optimization', target: 'optimization' },
-    ],
-  },
-  {
-    heading: 'Physics Solvers',
-    links: [
-      { label: 'Airfoil Aerodynamics (CFD)', target: 'simulation-lab' },
-      { label: 'Finite Element Analysis (FEA)', target: 'platform-modules' },
-      { label: 'Acoustics & NVH Dynamics', target: 'simulation-lab' },
-      { label: 'Coupled FSI Multiphysics', target: 'platform-modules' },
-    ],
-  },
-  {
-    heading: 'Quantum & Intelligence',
-    links: [
-      { label: 'Quantum Engineering Engine', target: 'quantum' },
-      { label: 'Variational Quantum Circuits (VQE/QAOA)', target: 'quantum' },
-      { label: 'Hybrid QPU-GPU Architecture', target: 'hybrid' },
-      { label: 'AI Neural Operators (PINNs)', target: 'ai-/-ml' },
-    ],
-  },
-];
-
 export default function Footer() {
-  const scrollTo = (targetId: string) => {
-    const el = document.getElementById(targetId);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <footer className="relative bg-bg-primary border-t border-border-subtle overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-cyan/40 to-transparent" />
@@ -62,27 +27,102 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav columns (8 cols) */}
+          {/* Details columns (8 cols) */}
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {navColumns.map((col) => (
-              <div key={col.heading}>
-                <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
-                  {col.heading}
-                </div>
-                <ul className="space-y-2.5">
-                  {col.links.map((link) => (
-                    <li key={link.label}>
-                      <button
-                        onClick={() => scrollTo(link.target)}
-                        className="text-slate-300 text-sm hover:text-brand-cyan transition-colors duration-200 font-normal text-left"
-                      >
-                        {link.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
+            {/* Company Details */}
+            <div>
+              <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
+                Company Details
               </div>
-            ))}
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Company Name</span>
+                  <span className="text-slate-200 font-medium">Enginuvity Nexus Technologies LLP</span>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Address</span>
+                  <span className="text-slate-300">Medha tower address</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Registration Details */}
+            <div>
+              <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
+                Registration Details
+              </div>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">GSTIN</span>
+                  <span className="text-slate-200 font-mono text-xs tracking-wider">37AAMFE5324P1ZV</span>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">PAN</span>
+                  <span className="text-slate-200 font-mono text-xs tracking-wider">AAMFE5324P</span>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">UDYAM (MSME)</span>
+                  <span className="text-slate-200 font-mono text-xs tracking-wider">UDYAM-AP-10-0119499</span>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">DPIIT Startup Recognition</span>
+                  <span className="text-slate-200 font-mono text-xs tracking-wider">DIPP248666</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Details */}
+            <div>
+              <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
+                Contact Details
+              </div>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Contact Person</span>
+                  <span className="text-slate-200">Libin Abraham</span>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Contact Number</span>
+                  <a href="tel:+918075998325" className="text-slate-200 hover:text-brand-cyan transition-colors">
+                    +91-8075998325
+                  </a>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Email ID</span>
+                  <div className="flex flex-col space-y-1">
+                    <a href="mailto:libin.abraham@enginuvitynexus.com" className="text-slate-200 hover:text-brand-cyan transition-colors break-all">
+                      libin.abraham@enginuvitynexus.com
+                    </a>
+                    <a href="mailto:info@enginuvitynexus.com" className="text-slate-200 hover:text-brand-cyan transition-colors break-all">
+                      info@enginuvitynexus.com
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Company Email</span>
+                  <a href="mailto:info@enginuvitynexus.com" className="text-slate-200 hover:text-brand-cyan transition-colors break-all">
+                    info@enginuvitynexus.com
+                  </a>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Website</span>
+                  <a
+                    href="https://www.enginuvitynexus.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-200 hover:text-brand-cyan transition-colors break-all"
+                  >
+                    https://www.enginuvitynexus.com
+                  </a>
+                </li>
+                <li>
+                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Mobile</span>
+                  <a href="tel:+918075998325" className="text-slate-200 hover:text-brand-cyan transition-colors">
+                    +91-8075998325
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
         </div>

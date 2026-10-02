@@ -192,12 +192,8 @@ export default function HeroSection() {
                     filter: 'drop-shadow(0 0 22px rgba(1, 200, 243, 0.45)) drop-shadow(0 0 50px rgba(1, 200, 243, 0.2))',
                   }}
                 >
-                  <source src="./ENT_animation_video.webm" type="video/webm" />
-                  <source src="./ENT_animation_video.mp4" type="video/mp4" />
                   <source src="./assets/ENT_animation_video.webm" type="video/webm" />
                   <source src="./assets/ENT_animation_video.mp4" type="video/mp4" />
-                  <source src="./ENT_animation_video.mov" type="video/quicktime" />
-                  <source src="./assets/ENT_animation_video.mov" type="video/quicktime" />
                 </video>
               </div>
 
