@@ -337,15 +337,6 @@ export default function QuantumSection() {
                             {item.howItWorks}
                           </p>
                         </div>
-
-                        <div>
-                          <span className="font-mono text-[10px] text-[#38bdf8] uppercase font-bold tracking-wider block mb-1">
-                            ENGINEERING RELEVANCE:
-                          </span>
-                          <p className="text-[#aaa8ba] leading-relaxed">
-                            {item.engineeringRelevance}
-                          </p>
-                        </div>
                       </div>
                     )}
                   </div>

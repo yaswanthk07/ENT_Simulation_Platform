@@ -19,6 +19,25 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
+  // Automatically close mobile menu immediately when user starts scrolling
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
+
+    window.addEventListener('scroll', closeMenu, { passive: true });
+    window.addEventListener('touchmove', closeMenu, { passive: true });
+    window.addEventListener('wheel', closeMenu, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', closeMenu);
+      window.removeEventListener('touchmove', closeMenu);
+      window.removeEventListener('wheel', closeMenu);
+    };
+  }, [menuOpen]);
+
   const scrollToTarget = (targetId: string) => {
     const el = document.getElementById(targetId);
     if (el) el.scrollIntoView({ behavior: 'smooth' });

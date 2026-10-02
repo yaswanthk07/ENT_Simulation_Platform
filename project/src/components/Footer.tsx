@@ -12,7 +12,7 @@ export default function Footer() {
           <img
             src="./assets/images/enginuvity_logo_transparent.png"
             alt="Enginuvity Nexus Technologies"
-            className="h-16 w-auto object-contain mb-4 mx-auto"
+            className="h-20 w-auto object-contain mb-4 mx-auto"
           />
           <div className="font-extrabold text-white text-base tracking-wider mb-1">
             ENGINUVITY NEXUS TECHNOLOGIES
