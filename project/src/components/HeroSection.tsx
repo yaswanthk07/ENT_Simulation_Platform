@@ -8,19 +8,19 @@ export default function HeroSection() {
 
   return (
     <section className="hero relative min-h-screen flex flex-col justify-between overflow-hidden bg-[#070C18]">
-      
+
       {/* ========================================================================= */}
       {/* STRICT DUAL-PANEL LAYOUT: hero-left (55%) & hero-right (45%)               */}
       {/* ========================================================================= */}
       <div className="relative z-10 flex-1 flex flex-col lg:flex-row w-full min-h-screen">
-        
+
         {/* ======================================================================= */}
         {/* LEFT SIDE: Light background (#F4F8FB), strictly contained               */}
         {/* ======================================================================= */}
         <div className="hero-left relative w-full lg:w-[55%] lg:max-w-[55%] min-w-0 bg-[#F4F8FB] overflow-hidden flex flex-col justify-center pt-24 sm:pt-28 pb-16 lg:pb-20 px-6 sm:px-10 lg:pl-12 lg:pr-8 xl:pl-16 xl:pr-12 2xl:pl-24 2xl:pr-16 border-b lg:border-b-0 lg:border-r border-[#01C8F3]/25">
-          
+
           {/* Subtle technical grid overlay for light background */}
-          <div 
+          <div
             className="absolute inset-0 pointer-events-none opacity-45"
             style={{
               backgroundImage: `
@@ -33,7 +33,7 @@ export default function HeroSection() {
 
           {/* Content wrapper strictly contained inside hero-left */}
           <div className="hero-content relative z-20 w-full max-w-[620px] xl:max-w-[680px] mx-auto lg:mx-0 flex flex-col justify-center min-w-0">
-            
+
             {/* Prominent ENTangle Logo */}
             <div className="hero-logo mb-4 sm:mb-5 lg:mb-6 max-w-full">
               <h1 className="sr-only">ENTangle — Quantum Engineering Simulation Platform</h1>
@@ -73,7 +73,7 @@ export default function HeroSection() {
             {/* Dedicated Left-Only Divider Line & Key Value Blocks */}
             <div className="left-divider w-full max-w-full border-t border-[#D5E2EC] pt-6 sm:pt-7">
               <div className="hero-stats w-full max-w-full">
-                
+
                 {/* 1. EXPLORE */}
                 <div className="hero-stat min-w-0 max-w-full overflow-hidden">
                   <div className="text-xl sm:text-2xl lg:text-[1.65rem] font-black text-[#07192F] tracking-tight leading-none">
@@ -121,9 +121,9 @@ export default function HeroSection() {
         {/* RIGHT SIDE: Dark navy background (#070C18) & Simulation visualization   */}
         {/* ======================================================================= */}
         <div className="hero-right relative w-full lg:w-[45%] lg:max-w-[45%] min-w-0 bg-[#070C18] flex items-center justify-center pt-8 pb-16 lg:py-0 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          
+
           {/* Subtle technical grid overlay for dark background */}
-          <div 
+          <div
             className="absolute inset-0 pointer-events-none opacity-30"
             style={{
               backgroundImage: `
@@ -135,14 +135,14 @@ export default function HeroSection() {
           />
 
           {/* Ambient soft cyan glow behind visualization */}
-          <div 
+          <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[460px] h-[460px] bg-[#01C8F3]/6 blur-[120px] rounded-full pointer-events-none"
           />
 
           {/* Visualization (100% UNCHANGED) */}
           <div className="engineering-visual relative z-20 flex items-center justify-center w-full">
             <div className="relative aspect-square w-full max-w-[420px] sm:max-w-[460px] lg:max-w-[480px] xl:max-w-[520px] mx-auto flex items-center justify-center">
-              
+
               {/* Technical corner coordinate brackets */}
               <div className="absolute top-2 left-2 w-6 h-6 border-t border-l border-[#01C8F3]/50 pointer-events-none" />
               <div className="absolute top-2 right-2 w-6 h-6 border-t border-r border-[#01C8F3]/50 pointer-events-none" />
@@ -150,7 +150,7 @@ export default function HeroSection() {
               <div className="absolute bottom-2 right-2 w-6 h-6 border-b border-r border-[#01C8F3]/50 pointer-events-none" />
 
               {/* Concentric Circular HUD Ring 1 (Outer ring with cardinal indicators) */}
-              <div 
+              <div
                 className="absolute inset-4 rounded-full border border-[#01C8F3]/30 pointer-events-none"
                 style={{ animation: 'spin 45s linear infinite' }}
               >
@@ -161,14 +161,14 @@ export default function HeroSection() {
               </div>
 
               {/* Concentric Circular HUD Ring 2 (Inner ring with subtle counter rotation) */}
-              <div 
+              <div
                 className="absolute inset-10 sm:inset-12 rounded-full border border-[#01C8F3]/20 pointer-events-none"
                 style={{ animation: 'spin 35s linear infinite reverse' }}
               />
 
               {/* Subtle radar sweep line in HUD frame */}
               <div className="absolute inset-8 rounded-full pointer-events-none overflow-hidden opacity-25">
-                <div 
+                <div
                   className="w-full h-full rounded-full"
                   style={{
                     background: 'conic-gradient(from 0deg at 50% 50%, rgba(1, 200, 243, 0.16) 0deg, transparent 60deg, transparent 360deg)',
@@ -208,9 +208,9 @@ export default function HeroSection() {
       {/* FLOATING HUD LABELS (Dedicated safe zones)                                */}
       {/* ========================================================================= */}
       <div className="hero-hud-labels" aria-hidden="true">
-        <span className="hud-label hud-label-light hud-velocity">VELOCITY</span>
-        <span className="hud-label hud-label-light hud-pressure">PRESSURE</span>
-        <span className="hud-label hud-label-light hud-iteration">ITERATION</span>
+        {/* <span className="hud-label hud-label-light hud-velocity">VELOCITY</span> */
+        /* <span className="hud-label hud-label-light hud-pressure">PRESSURE</span> */
+        /* <span className="hud-label hud-label-light hud-iteration">ITERATION</span>*/}
         <span className="hud-label hud-label-dark hud-temperature">TEMPERATURE</span>
         <span className="hud-label hud-label-dark hud-stress">STRESS</span>
         <span className="hud-label hud-label-dark hud-mesh">MESH</span>
@@ -220,7 +220,7 @@ export default function HeroSection() {
       {/* ========================================================================= */}
       {/* BOTTOM CENTER: Explore Platform Anchor & Navy Fade Band                   */}
       {/* ========================================================================= */}
-      <div 
+      <div
         className="absolute bottom-0 inset-x-0 h-28 sm:h-32 pointer-events-none z-20"
         style={{
           background: 'linear-gradient(to bottom, transparent 0%, rgba(7, 12, 24, 0.6) 45%, #070C18 100%)',

@@ -27,11 +27,10 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? 'bg-[#070C18]/95 backdrop-blur-xl border-b border-[#01C8F3]/20 shadow-2xl'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -43,15 +42,13 @@ export default function Navigation() {
               className="h-10 sm:h-11 lg:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="hidden sm:flex flex-col">
-              <span className={`font-extrabold text-sm tracking-wider transition-colors duration-300 ${
-                scrolled ? 'text-white' : 'text-[#07192F]'
-              }`}>
+              <span className={`font-extrabold text-sm tracking-wider transition-colors duration-300 ${scrolled ? 'text-white' : 'text-[#07192F]'
+                }`}>
                 ENGINUVITY NEXUS TECHNOLOGIES
               </span>
-              <span className={`font-mono text-[11px] tracking-widest uppercase transition-colors duration-300 ${
-                scrolled ? 'text-[#01C8F3]' : 'text-[#0284C7]'
-              }`}>
-                Quantum Engineering Platform
+              <span className={`font-mono text-[11px] tracking-widest uppercase transition-colors duration-300 ${scrolled ? 'text-[#01C8F3]' : 'text-[#0284C7]'
+                }`}>
+                Quantum Engineering Simulation Platform
               </span>
             </div>
           </a>
@@ -62,11 +59,10 @@ export default function Navigation() {
               <button
                 key={item.label}
                 onClick={() => scrollToTarget(item.target)}
-                className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 relative group ${
-                  scrolled
+                className={`px-3.5 py-2 text-sm font-semibold transition-colors duration-200 relative group ${scrolled
                     ? 'text-slate-200 hover:text-[#01C8F3]'
                     : 'text-slate-100 hover:text-[#01C8F3]'
-                }`}
+                  }`}
               >
                 {item.label}
                 <span className="absolute bottom-1 left-3.5 right-3.5 h-0.5 bg-[#01C8F3] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -76,9 +72,8 @@ export default function Navigation() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className={`lg:hidden p-2 transition-colors ${
-              scrolled ? 'text-white/80 hover:text-[#01C8F3]' : 'text-[#07192F] hover:text-[#0284C7]'
-            }`}
+            className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-white/80 hover:text-[#01C8F3]' : 'text-[#07192F] hover:text-[#0284C7]'
+              }`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
           >

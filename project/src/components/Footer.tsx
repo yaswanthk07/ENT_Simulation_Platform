@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           {/* Details columns (8 cols) */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {/* Company Details */}
             <div>
               <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
@@ -42,31 +42,6 @@ export default function Footer() {
                 <li>
                   <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">Address</span>
                   <span className="text-slate-300">Medha tower address</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Registration Details */}
-            <div>
-              <div className="font-mono text-xs font-bold text-brand-cyan tracking-[0.15em] mb-4 uppercase">
-                Registration Details
-              </div>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">GSTIN</span>
-                  <span className="text-slate-200 font-mono text-xs tracking-wider">37AAMFE5324P1ZV</span>
-                </li>
-                <li>
-                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">PAN</span>
-                  <span className="text-slate-200 font-mono text-xs tracking-wider">AAMFE5324P</span>
-                </li>
-                <li>
-                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">UDYAM (MSME)</span>
-                  <span className="text-slate-200 font-mono text-xs tracking-wider">UDYAM-AP-10-0119499</span>
-                </li>
-                <li>
-                  <span className="text-slate-400 text-xs font-mono uppercase tracking-wider block mb-0.5">DPIIT Startup Recognition</span>
-                  <span className="text-slate-200 font-mono text-xs tracking-wider">DIPP248666</span>
                 </li>
               </ul>
             </div>
