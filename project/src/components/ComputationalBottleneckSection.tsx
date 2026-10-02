@@ -2,7 +2,7 @@ export default function ComputationalBottleneckSection() {
   return (
     <section
       id="bottleneck"
-      className="relative py-12 sm:py-14 lg:py-16 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/20"
+      className="relative py-12 sm:py-14 lg:py-16 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/20 scroll-mt-28"
     >
       {/* Background technical grid and subtle ambient glow */}
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
@@ -130,7 +130,7 @@ export default function ComputationalBottleneckSection() {
           </div>
 
           {/* ------------------------------------------------ */}
-          {/* CHALLENGE 04: COUPLE                             */}
+          {/* CHALLENGE 04: INTEGRATE                             */}
           {/* ------------------------------------------------ */}
           <div className="p-6 sm:p-8 rounded-sm bg-[rgba(13,10,24,0.78)] border border-[#01c8f3]/25 hover:border-[#03cff4]/60 transition-all duration-300 flex flex-col justify-between group shadow-xl">
             <div>
@@ -139,7 +139,7 @@ export default function ComputationalBottleneckSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#03cff4]" />
                   <span className="font-mono text-xs font-bold text-[#03cff4] tracking-widest uppercase">
-                    04 COUPLE
+                    04 INTEGRATE
                   </span>
                 </div>
                 <span className="font-mono text-xs text-[#aaa8ba] uppercase tracking-wider bg-slate-900/90 px-2 py-0.5 rounded border border-white/5">

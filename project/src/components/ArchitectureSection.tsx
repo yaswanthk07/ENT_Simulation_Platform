@@ -15,7 +15,7 @@ export default function ArchitectureSection() {
   }, []);
 
   return (
-    <section id="architecture" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-primary overflow-hidden border-t border-border-subtle">
+    <section id="architecture" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-primary overflow-hidden border-t border-border-subtle scroll-mt-28">
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(3,207,244,0.06)_0%,transparent_60%)] pointer-events-none" />
 

@@ -97,7 +97,7 @@ export default function PlatformIntro() {
   const activeBenefit = benefits.find((b) => b.id === activeId) || benefits[0];
 
   return (
-    <section id="platform" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="platform" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle scroll-mt-28">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,229,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 

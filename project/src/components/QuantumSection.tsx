@@ -234,7 +234,7 @@ export default function QuantumSection() {
   return (
     <section
       id="quantum"
-      className="relative py-12 sm:py-14 lg:py-16 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/15"
+      className="relative py-12 sm:py-14 lg:py-16 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/15 scroll-mt-28"
     >
       {/* Precision Engineering Background Grid & Gradients */}
       <div

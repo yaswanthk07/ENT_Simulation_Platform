@@ -525,3 +525,13 @@ input[type="range"]::-moz-range-thumb {
   border: none;
   box-shadow: 0 0 8px rgba(1, 200, 243, 0.5);
 }
+
+/* Navigation scroll position offset for fixed header */
+#platform,
+#platform-modules,
+#quantum,
+#architecture,
+#roadmap,
+#bottleneck {
+  scroll-margin-top: 115px;
+}

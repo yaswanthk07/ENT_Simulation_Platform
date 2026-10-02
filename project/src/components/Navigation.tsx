@@ -39,9 +39,21 @@ export default function Navigation() {
   }, [menuOpen]);
 
   const scrollToTarget = (targetId: string) => {
-    const el = document.getElementById(targetId);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
     setMenuOpen(false);
+    const el = document.getElementById(targetId);
+    if (!el) return;
+
+    requestAnimationFrame(() => {
+      const navbarHeight = 80;
+      const breathingSpace = 35; // 35px breathing space below fixed navbar
+      const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
+      const targetScrollY = elementTop - navbarHeight - breathingSpace;
+
+      window.scrollTo({
+        top: Math.max(0, targetScrollY),
+        behavior: 'smooth',
+      });
+    });
   };
 
   return (

@@ -27,7 +27,7 @@ const MODULES: SimulationModule[] = [
     num: '02',
     title: 'THERMAL ANALYSIS',
     line1: 'Analyse heat transfer together with fluid flow to predict temperature distribution and thermal behaviour.',
-    line2: 'Study convection, cooling, heating and fluid–thermal interactions within engineering systems.',
+    line2: 'Study convection, cooling, heating and fluid thermal interactions within engineering systems.',
     status: 'PHYSICS MODULE',
     accentColor: '#fa9224',
     secondaryColor: '#ffc21c',
@@ -140,7 +140,7 @@ export default function ClassicalSimSection() {
   }, []);
 
   return (
-    <section id="platform-modules" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="platform-modules" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle scroll-mt-28">
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(3,207,244,0.06)_0%,transparent_60%)] pointer-events-none" />
 

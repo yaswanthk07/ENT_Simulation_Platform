@@ -64,7 +64,7 @@ export default function RoadmapSection() {
   const activeData = ROADMAP_DATA[selectedYearIndex];
 
   return (
-    <section id="roadmap" className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="roadmap" className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle scroll-mt-28">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
       {/* Ambient background glow */}
