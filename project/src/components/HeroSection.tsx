@@ -1,7 +1,5 @@
 import { ChevronDown } from 'lucide-react';
 
-const statLabels = ['VELOCITY', 'PRESSURE', 'TEMPERATURE', 'STRESS', 'MESH', 'SOLVER', 'ITERATION'];
-
 export default function HeroSection() {
   const scrollDown = () => {
     const el = document.getElementById('bottleneck') || document.getElementById('platform');
@@ -40,57 +38,40 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Floating technical labels matching reference screenshot */}
-      {statLabels.map((label, i) => {
-        const topPercent = 14 + ((i * 12) % 65);
-        const isUpper = i === 0 || i === 1 || i === 2 || i === 6; // VELOCITY, PRESSURE, TEMPERATURE, ITERATION
-        return (
-          <div
-            key={label}
-            className="absolute hidden sm:block pointer-events-none z-20"
-            style={{
-              left: `${6 + ((i * 14) % 84)}%`,
-              top: `${topPercent}%`,
-              animation: `particleFloat ${3 + i * 0.5}s ease-in-out infinite`,
-              animationDelay: `${i * 0.4}s`,
-            }}
-          >
-            <span
-              className={`font-mono text-xs tracking-widest px-2.5 py-0.5 rounded transition-colors duration-300 ${
-                isUpper
-                  ? 'text-[#0A2235] font-bold bg-white/80 border border-[#0A2235]/15 shadow-sm backdrop-blur-sm'
-                  : 'text-brand-cyan font-bold bg-[#061725]/85 border border-brand-cyan/40 backdrop-blur-sm shadow-[0_0_12px_rgba(1,200,243,0.15)]'
-              }`}
-            >
-              {label}
-            </span>
-          </div>
-        );
-      })}
+      {/* Decorative technical HUD labels in dedicated safe zones */}
+      <div className="hero-hud-labels" aria-hidden="true">
+        <span className="hud-label hud-label-light hud-velocity">VELOCITY</span>
+        <span className="hud-label hud-label-light hud-iteration">ITERATION</span>
+        <span className="hud-label hud-label-light hud-pressure">PRESSURE</span>
+        <span className="hud-label hud-label-dark hud-temperature">TEMPERATURE</span>
+        <span className="hud-label hud-label-dark hud-stress">STRESS</span>
+        <span className="hud-label hud-label-dark hud-mesh">MESH</span>
+        <span className="hud-label hud-label-dark hud-solver">SOLVER</span>
+      </div>
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
+      <div className="hero-content relative z-10 flex-1 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 w-full">
         <div className="grid lg:grid-cols-12 gap-8 min-h-[calc(100vh-9rem)] items-center">
 
           {/* Left: Hero text (7 cols) */}
           <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-center">
-            <div className="mb-6">
-              <h1 className="sr-only">ENTangle</h1>
+            <div className="hero-logo mb-5 sm:mb-6 lg:mb-7 relative z-10">
+              <h1 className="sr-only">ENTangle — Quantum Engineering Simulation Platform</h1>
               <img
                 src="./assets/images/entangle_logo.png"
                 alt="ENTangle"
-                className="h-16 sm:h-20 lg:h-24 w-auto object-contain"
+                className="h-[72px] sm:h-24 md:h-[108px] lg:h-[132px] xl:h-36 2xl:h-[156px] w-auto max-w-full object-contain"
               />
             </div>
 
-            <p className="text-[#0A2235] text-lg sm:text-xl leading-relaxed mb-9 max-w-2xl font-semibold">
-              Setting the Platform for the Quantum Engineering Simulation
+            <p className="hero-tagline text-[#082847] text-lg sm:text-xl md:text-2xl lg:text-[1.75rem] xl:text-[1.95rem] leading-tight font-bold tracking-tight mb-8 sm:mb-9 max-w-2xl relative z-10">
+              Quantum Engineering Simulation Platform
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="hero-buttons flex flex-col sm:flex-row gap-4 mb-9 sm:mb-11 relative z-10">
               <button
                 onClick={scrollDown}
-                className="flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-base font-bold tracking-wider bg-white text-[#01C8F3] hover:bg-slate-50 transition-all duration-200 shadow-md"
+                className="flex items-center justify-center gap-3 px-8 sm:px-9 py-4 sm:py-4.5 rounded-sm text-base sm:text-lg font-bold tracking-wider bg-white text-[#01C8F3] hover:bg-slate-50 transition-all duration-200 shadow-md"
               >
                 EXPLORE PLATFORM
               </button>
@@ -98,36 +79,36 @@ export default function HeroSection() {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=info@enginuvitynexus.com&su=Start%20Free%20Trial"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 px-8 py-4 rounded-sm text-base font-bold tracking-wider text-white bg-[#01C8F3] hover:bg-[#00B4E0] transition-all duration-200 shadow-md"
+                className="flex items-center justify-center gap-3 px-8 sm:px-9 py-4 sm:py-4.5 rounded-sm text-base sm:text-lg font-bold tracking-wider text-white bg-[#01C8F3] hover:bg-[#00B4E0] transition-all duration-200 shadow-md"
               >
                 Start Free Trial
               </a>
             </div>
 
             {/* Quick stats / Highlights */}
-            <div className="grid grid-cols-3 gap-6 pt-7">
+            <div className="hero-stats grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 relative z-10">
               <div>
-                <div className="text-xl sm:text-2xl xl:text-3xl font-black text-brand-cyan tracking-tight">EXPLORE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-white mt-1 font-sans font-normal">larger design spaces</div>
+                <div className="text-2xl sm:text-3xl lg:text-[1.85rem] xl:text-[2.2rem] font-black text-brand-cyan tracking-tight leading-none">EXPLORE</div>
+                <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-white/95 mt-2 font-sans font-medium leading-snug">larger design spaces</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl xl:text-3xl font-black text-brand-cyan tracking-tight">OPTIMIZE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-white mt-1 font-sans font-normal">complex engineering systems</div>
+                <div className="text-2xl sm:text-3xl lg:text-[1.85rem] xl:text-[2.2rem] font-black text-brand-cyan tracking-tight leading-none">OPTIMIZE</div>
+                <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-white/95 mt-2 font-sans font-medium leading-snug">complex engineering systems</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl xl:text-3xl font-black text-brand-cyan tracking-tight">ACCELERATE</div>
-                <div className="text-base sm:text-lg xl:text-xl text-white mt-1 font-sans font-normal">compute-intensive subproblems</div>
+                <div className="text-2xl sm:text-3xl lg:text-[1.85rem] xl:text-[2.2rem] font-black text-brand-cyan tracking-tight leading-none">ACCELERATE</div>
+                <div className="text-sm sm:text-base lg:text-lg xl:text-xl text-white/95 mt-2 font-sans font-medium leading-snug">compute-intensive subproblems</div>
               </div>
             </div>
 
             {/* Research initiative disclaimer */}
-            <p className="text-sm sm:text-base text-white/90 mt-6 leading-relaxed font-normal border-l-2 border-brand-cyan pl-3">
+            <p className="hero-disclaimer text-sm sm:text-base lg:text-[1.05rem] text-white/90 mt-7 sm:mt-8 leading-relaxed font-normal border-l-2 border-brand-cyan pl-3.5 max-w-2xl relative z-10">
               ENTangle is currently a research-stage initiative. The features shown on this website represent our planned development roadmap and conceptual framework.
             </p>
           </div>
 
           {/* Right: 3D Visualization (5 cols) */}
-          <div className="lg:col-span-5 xl:col-span-5 relative flex items-center justify-center">
+          <div className="engineering-visual lg:col-span-5 xl:col-span-5 relative z-10 flex items-center justify-center">
             <div className="relative aspect-square w-full max-w-lg xl:max-w-xl mx-auto flex items-center justify-center">
               {/* Corner brackets matching reference image */}
               <div className="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-brand-cyan/80 pointer-events-none" />

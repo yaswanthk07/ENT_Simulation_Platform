@@ -191,11 +191,191 @@
   100% { top: 100%; opacity: 0; }
 }
 
+/* ENTangle Hero HUD Safe-Zone Animations (subtle 2-3px drift, 5-7s, alternate) */
+@keyframes hudDriftSlow {
+  0% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes hudDriftAlt {
+  0% {
+    transform: translateY(2px) translateX(-2px);
+  }
+  100% {
+    transform: translateY(-2px) translateX(2px);
+  }
+}
+
+@keyframes hudDriftGentle {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+
 @keyframes particleFloat {
-  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.6; }
-  25% { transform: translateY(-20px) translateX(10px); opacity: 1; }
-  50% { transform: translateY(-10px) translateX(20px); opacity: 0.8; }
-  75% { transform: translateY(-30px) translateX(5px); opacity: 0.4; }
+  0% { transform: translateY(-3px); }
+  100% { transform: translateY(3px); }
+}
+
+/* Dedicated Hero HUD Label Styles & Safe Zones */
+.hero-hud-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hud-label {
+  position: absolute;
+  pointer-events: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Upper-left labels on light gradient background */
+.hud-label-light {
+  color: #0A2235;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(10, 34, 53, 0.18);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(4px);
+  opacity: 0.65;
+}
+
+/* Middle / right labels on dark navy background */
+.hud-label-dark {
+  color: #01C8F3;
+  background: rgba(6, 23, 37, 0.75);
+  border: 1px solid rgba(1, 200, 243, 0.35);
+  box-shadow: 0 0 10px rgba(1, 200, 243, 0.12);
+  backdrop-filter: blur(4px);
+  opacity: 0.7;
+}
+
+/* Real content layers explicitly raised above decorative HUD */
+.hero-content,
+.hero-logo,
+.hero-tagline,
+.hero-buttons,
+.hero-stats,
+.hero-disclaimer {
+  position: relative;
+  z-index: 10;
+}
+
+.engineering-visual {
+  position: relative;
+  z-index: 10;
+}
+
+/* Mobile (< 768px): Hide decorative HUD labels completely for optimal usability */
+@media (max-width: 767px) {
+  .hero-hud-labels {
+    display: none !important;
+  }
+}
+
+/* Tablet (768px - 1023px): Display only 4 labels in safe peripheral zones */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hud-iteration,
+  .hud-pressure,
+  .hud-temperature {
+    display: none !important;
+  }
+
+  .hud-velocity {
+    top: 88px;
+    left: clamp(20px, 4vw, 40px);
+    animation: hudDriftSlow 6s ease-in-out infinite alternate;
+  }
+
+  .hud-stress {
+    top: 88px;
+    right: clamp(20px, 4vw, 40px);
+    left: auto;
+    animation: hudDriftSlow 5.5s ease-in-out infinite alternate;
+  }
+
+  .hud-mesh {
+    bottom: clamp(140px, 18%, 200px);
+    left: clamp(20px, 6vw, 48px);
+    top: auto;
+    animation: hudDriftAlt 6.5s ease-in-out infinite alternate;
+  }
+
+  .hud-solver {
+    bottom: clamp(65px, 8%, 95px);
+    right: clamp(20px, 6vw, 48px);
+    left: auto;
+    top: auto;
+    animation: hudDriftGentle 5s ease-in-out infinite alternate;
+  }
+}
+
+/* Desktop (>= 1024px): Dedicated safe-zones for all 7 labels */
+@media (min-width: 1024px) {
+  /* 1. VELOCITY: upper-left atmospheric area, far above logo */
+  .hud-velocity {
+    top: clamp(86px, 10.5%, 108px);
+    left: clamp(24px, 5%, 80px);
+    animation: hudDriftSlow 6s ease-in-out infinite alternate;
+  }
+
+  /* 2. ITERATION: below VELOCITY, safely above logo with >40px padding */
+  .hud-iteration {
+    top: clamp(126px, 14.5%, 150px);
+    left: clamp(32px, 6.5%, 100px);
+    animation: hudDriftAlt 5.5s ease-in-out infinite alternate;
+  }
+
+  /* 3. PRESSURE: upper area, to the right of logo, above tagline, away from navbar */
+  .hud-pressure {
+    top: clamp(90px, 11%, 118px);
+    left: clamp(280px, 23%, 380px);
+    animation: hudDriftSlow 6.5s ease-in-out infinite alternate;
+  }
+
+  /* 4. TEMPERATURE: open central corridor between left text and right HUD, not over tagline */
+  .hud-temperature {
+    top: clamp(230px, 29%, 310px);
+    left: clamp(48%, 51%, 53%);
+    animation: hudDriftAlt 6.2s ease-in-out infinite alternate;
+  }
+
+  /* 5. STRESS: center transition area lower down, right of buttons/stats, left of circular HUD */
+  .hud-stress {
+    top: clamp(430px, 50%, 530px);
+    left: clamp(46%, 49%, 52%);
+    animation: hudDriftSlow 5.8s ease-in-out infinite alternate;
+  }
+
+  /* 6. MESH: near lower-left outer rim of circular technical visual, outside submarine */
+  .hud-mesh {
+    top: clamp(540px, 64%, 660px);
+    left: clamp(58%, 62%, 65%);
+    animation: hudDriftAlt 6.8s ease-in-out infinite alternate;
+  }
+
+  /* 7. SOLVER: near lower portion of circular visualization, outside submarine */
+  .hud-solver {
+    top: clamp(660px, 76%, 770px);
+    left: clamp(73%, 77%, 81%);
+    animation: hudDriftSlow 5.2s ease-in-out infinite alternate;
+  }
 }
 
 @keyframes countUp {
