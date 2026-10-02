@@ -15,14 +15,14 @@ export default function ArchitectureSection() {
   }, []);
 
   return (
-    <section id="architecture" ref={sectionRef} className="relative py-24 bg-bg-primary overflow-hidden border-t border-border-subtle">
+    <section id="architecture" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-primary overflow-hidden border-t border-border-subtle">
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(3,207,244,0.06)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className={`text-center max-w-3xl mx-auto mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center max-w-3xl mx-auto mb-8 sm:mb-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block px-3.5 py-1 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-3">
             <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
               INTELLIGENT HYBRID ARCHITECTURE

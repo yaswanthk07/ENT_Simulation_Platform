@@ -140,14 +140,14 @@ export default function ClassicalSimSection() {
   }, []);
 
   return (
-    <section id="platform-modules" ref={sectionRef} className="relative py-24 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="platform-modules" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
       <div className="absolute inset-0 grid-bg opacity-25 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(3,207,244,0.06)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
-        <div className={`text-center max-w-4xl mx-auto mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center max-w-4xl mx-auto mb-10 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block px-4 py-1.5 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-4">
             <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
               ENGINEERING SIMULATION MODULES

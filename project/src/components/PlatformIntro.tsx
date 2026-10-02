@@ -97,7 +97,7 @@ export default function PlatformIntro() {
   const activeBenefit = benefits.find((b) => b.id === activeId) || benefits[0];
 
   return (
-    <section id="platform" ref={sectionRef} className="relative py-24 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="platform" ref={sectionRef} className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,229,255,0.06)_0%,transparent_70%)] pointer-events-none" />
 
@@ -105,7 +105,7 @@ export default function PlatformIntro() {
 
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+          className={`text-center mb-10 sm:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
         >
           <div className="inline-block px-4 py-1.5 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-4">
             <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
@@ -305,7 +305,7 @@ export default function PlatformIntro() {
         </div>
 
         {/* Telemetry Pipeline Footer */}
-        <div className="mt-14 pt-8 border-t border-border-subtle flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-border-subtle flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2.5 sm:gap-4 flex-wrap justify-center text-center">
             <div className="px-3.5 py-1.5 rounded-sm bg-bg-card border border-border-subtle">
               <span className="font-mono text-xs sm:text-sm font-bold text-white tracking-[0.18em]">

@@ -64,7 +64,7 @@ export default function RoadmapSection() {
   const activeData = ROADMAP_DATA[selectedYearIndex];
 
   return (
-    <section id="roadmap" className="relative py-28 bg-bg-secondary overflow-hidden border-t border-border-subtle">
+    <section id="roadmap" className="relative py-12 sm:py-14 lg:py-16 bg-bg-secondary overflow-hidden border-t border-border-subtle">
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
       {/* Ambient background glow */}
@@ -73,7 +73,7 @@ export default function RoadmapSection() {
       <div className="relative z-10 max-w-[1540px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 border border-brand-cyan/40 rounded-sm bg-brand-cyan/10 mb-4 shadow-[0_0_15px_rgba(0,229,255,0.15)]">
             <Sparkles size={14} className="text-brand-cyan animate-pulse" />
             <span className="font-mono text-sm sm:text-base font-bold text-brand-cyan tracking-[0.2em] uppercase">
@@ -93,7 +93,7 @@ export default function RoadmapSection() {
         </div>
 
         {/* Timeline Navigation Bar */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-10">
           <div className="grid grid-cols-1 sm:grid-cols-5 gap-3.5">
             {ROADMAP_DATA.map((item, idx) => {
               const isSelected = selectedYearIndex === idx;
@@ -145,7 +145,7 @@ export default function RoadmapSection() {
         </div>
 
         {/* Detailed Selected Year Spotlight Card */}
-        <div className="glass-panel p-6 sm:p-10 rounded-sm border border-border-subtle shadow-2xl relative overflow-hidden mb-16">
+        <div className="glass-panel p-6 sm:p-10 rounded-sm border border-border-subtle shadow-2xl relative overflow-hidden mb-0">
           <div className="absolute top-0 right-0 w-80 h-80 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10">

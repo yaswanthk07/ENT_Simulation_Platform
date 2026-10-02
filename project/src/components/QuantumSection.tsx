@@ -234,7 +234,7 @@ export default function QuantumSection() {
   return (
     <section
       id="quantum"
-      className="relative py-28 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/15"
+      className="relative py-12 sm:py-14 lg:py-16 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/15"
     >
       {/* Precision Engineering Background Grid & Gradients */}
       <div
@@ -255,7 +255,7 @@ export default function QuantumSection() {
         {/* ================================================== */}
         {/* SECTION HEADER                                     */}
         {/* ================================================== */}
-        <div className="max-w-4xl mb-16">
+        <div className="max-w-4xl mb-10 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xs border border-[#03cff4]/30 bg-[#03cff4]/10 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-[#03cff4] animate-pulse" />
             <span className="font-mono text-sm sm:text-base font-bold text-[#03cff4] tracking-[0.2em] uppercase">
@@ -358,10 +358,10 @@ export default function QuantumSection() {
         {/* ================================================== */}
         {/* BOTTOM SUMMARY SECTION                             */}
         {/* ================================================== */}
-        <div className="mb-12 pt-12 border-t border-[#01c8f3]/20">
+        <div className="mb-0 pt-8 sm:pt-10 border-t border-[#01c8f3]/20">
 
           {/* Heading for Computational Pipeline */}
-          <div className="mb-8">
+          <div className="mb-6">
             <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight uppercase">
               Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#03cff4] to-[#0c8fce]">Computational Pathway</span>
             </h3>

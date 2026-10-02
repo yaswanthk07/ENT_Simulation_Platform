@@ -6,13 +6,13 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-cyan/40 to-transparent" />
 
       {/* Reduced margins: max-w-[1520px] */}
-      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16">
         {/* Brand (Centered) */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
           <img
             src="./assets/images/enginuvity_logo_transparent.png"
             alt="Enginuvity Nexus Technologies"
-            className="h-12 w-auto object-contain mb-4 mx-auto"
+            className="h-16 w-auto object-contain mb-4 mx-auto"
           />
           <div className="font-extrabold text-white text-base tracking-wider mb-1">
             ENGINUVITY NEXUS TECHNOLOGIES
