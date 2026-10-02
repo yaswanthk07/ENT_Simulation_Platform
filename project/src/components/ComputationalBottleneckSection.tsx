@@ -1,7 +1,7 @@
 export default function ComputationalBottleneckSection() {
   return (
-    <section 
-      id="bottleneck" 
+    <section
+      id="bottleneck"
       className="relative py-28 bg-[#040409] text-[#fbfbff] overflow-hidden border-t border-[#01c8f3]/20"
     >
       {/* Background technical grid and subtle ambient glow */}
@@ -10,7 +10,7 @@ export default function ComputationalBottleneckSection() {
       <div className="absolute bottom-1/4 right-10 w-[600px] h-[400px] bg-[#9f04c3]/5 blur-[180px] pointer-events-none rounded-full" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* ================================================== */}
         {/* SECTION HEADER                                     */}
         {/* ================================================== */}
@@ -34,7 +34,7 @@ export default function ComputationalBottleneckSection() {
 
           <div className="border-l-2 border-[#03cff4]/40 pl-4 py-1">
             <p className="text-lg sm:text-xl font-semibold text-white/90">
-              High-fidelity engineering simulation is no longer about solving a single model.
+              High-fidelity engineering simulation is no longer about solving a single physical phenomenon
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function ComputationalBottleneckSection() {
         {/* Desktop: 2x2, Tablet: 2 cols, Mobile: 1 col        */}
         {/* ================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-24">
-          
+
           {/* ------------------------------------------------ */}
           {/* CHALLENGE 01: SCALE                              */}
           {/* ------------------------------------------------ */}
@@ -66,7 +66,7 @@ export default function ComputationalBottleneckSection() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
                 SIMULATIONS ARE<br />GETTING BIGGER
               </h3>
-              
+
               <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 More resolution means more computation.
               </div>
@@ -94,7 +94,7 @@ export default function ComputationalBottleneckSection() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
                 THE SAME EQUATIONS<br />ARE SOLVED AGAIN AND AGAIN
               </h3>
-              
+
               <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 Simulation is iterative by nature.
               </div>
@@ -122,7 +122,7 @@ export default function ComputationalBottleneckSection() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
                 DESIGN EXPLORATION<br />MULTIPLIES THE COST
               </h3>
-              
+
               <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
                 One simulation is manageable. Thousands of designs are not.
               </div>
@@ -150,9 +150,9 @@ export default function ComputationalBottleneckSection() {
               <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
                 PHYSICS DOESN'T<br />EXIST IN ISOLATION
               </h3>
-              
+
               <div className="text-lg sm:text-xl font-semibold text-[#03cff4]">
-                Real engineering systems are coupled.
+                Real engineering simulations are coupled.
               </div>
             </div>
           </div>

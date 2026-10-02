@@ -20,7 +20,7 @@ export default function ArchitectureSection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(3,207,244,0.06)_0%,transparent_60%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className={`text-center max-w-3xl mx-auto mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="inline-block px-3.5 py-1 border border-brand-cyan/30 rounded-sm bg-brand-cyan/10 mb-3">
@@ -37,7 +37,7 @@ export default function ArchitectureSection() {
 
         {/* Horizontal Architecture Flow Pipeline */}
         <div className={`max-w-4xl mx-auto flex flex-col items-center transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          
+
           {/* Step 1: Engineering The Physics */}
           <div className="w-full max-w-md p-4 rounded-sm bg-bg-card border border-brand-cyan/40 text-center shadow-lg">
             <div className="font-mono text-[11px] font-bold text-brand-cyan tracking-[0.2em] uppercase">
@@ -47,7 +47,7 @@ export default function ArchitectureSection() {
               ENGINEERING THE PHYSICS
             </div>
             <div className="text-sm text-slate-300 mt-1">
-              Fluid, Thermal, Structural, Multiphase, Acoustic & Coupled Field Equations
+              Fluid, Thermal, Structural, and Multiphysics
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export default function ArchitectureSection() {
 
           {/* Step 3: Compute Engines Grid */}
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 my-2">
-            
+
             {/* Classical Solvers */}
             <div className="p-5 rounded-sm bg-bg-card/90 border border-brand-cyan/30 flex flex-col justify-between hover:border-brand-cyan/60 transition-colors">
               <div>
